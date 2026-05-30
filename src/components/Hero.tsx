@@ -45,16 +45,17 @@ export default function Hero() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] tracking-[0.35em] text-text-dark/45 uppercase font-bold">
-                  AMAZINK ATELIER
+                  AMAZINK TATTOO STUDIO
                 </span>
                 <span className="text-[8px] tracking-[0.2em] text-gold uppercase mt-0.5 font-semibold">
-                  INCISION ARTISTRY // CALICUT
+                  BEST TATTOO STUDIO IN CALICUT // KOZHIKODE, KERALA
                 </span>
               </div>
             </div>
 
             {/* Massive Serif Overlapping Headline - Adjusted size for 100% viewport containment */}
             <h1 className="editorial-title text-[40px] sm:text-[60px] xl:text-[78px] text-text-dark leading-[0.92] mb-6 font-extralight tracking-tighter lg:mr-[-80px] relative z-30 drop-shadow-sm">
+              <span className="sr-only">Amazink Tattoo - Best Tattoo Studio in Calicut, Kozhikode Kerala</span>
               ART ON SKIN.<br />
               <span className="italic font-light text-gold">DESIGNED</span> TO LAST.
             </h1>

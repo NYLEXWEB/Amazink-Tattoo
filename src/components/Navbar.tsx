@@ -70,7 +70,6 @@ export default function Navbar() {
             { name: 'About', id: 'about' },
             { name: 'Artists', id: 'artists' },
             { name: 'Gallery', id: 'gallery' },
-            { name: 'Services', id: 'services' },
             { name: 'Journal', id: 'journal' },
             { name: 'Contact', id: 'booking' },
           ].map((item) => (
@@ -143,7 +142,6 @@ export default function Navbar() {
             { name: 'About', id: 'about' },
             { name: 'Artists', id: 'artists' },
             { name: 'Gallery', id: 'gallery' },
-            { name: 'Services', id: 'services' },
             { name: 'Journal', id: 'journal' },
             { name: 'Contact', id: 'booking' },
           ].map((item) => (
@@ -155,6 +153,7 @@ export default function Navbar() {
               {item.name}
             </button>
           ))}
+
           <button
             onClick={() => handleScrollTo('booking')}
             className="w-full text-center bg-gold hover:bg-[#B39457] text-white py-3.5 rounded-full text-xs tracking-[0.22em] uppercase font-bold transition-all duration-300 cursor-pointer shadow-md shadow-gold/10"

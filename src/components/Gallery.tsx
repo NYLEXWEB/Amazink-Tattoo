@@ -9,58 +9,93 @@ type Artwork = {
   imgUrl: string;
   artist: string;
   dimensions: string;
+  altText: string;
 };
 
 const ARTWORKS: Artwork[] = [
   {
     id: 1,
-    title: 'THE BOTANIST ARCHIVE',
-    category: 'Fine Line',
-    imgUrl: 'https://images.unsplash.com/photo-1550537687-c91072c4792d?q=80&w=800&auto=format&fit=crop',
-    artist: 'Valerie Vance',
-    dimensions: '14cm x 8cm',
+    title: 'COSMIC VISIONARY',
+    category: 'Blackwork',
+    imgUrl: '/astronaut-eye-surrealism-tattoo-kozhikode.jpg',
+    artist: 'Midhun',
+    dimensions: '18cm x 10cm',
+    altText: 'Surrealist astronaut blackwork forearm tattoo with a large all-seeing eye replacing the helmet visor, surrounded by celestial and geometric alignments, custom designed at Amazing Tattoo in Kozhikode.',
   },
   {
     id: 2,
-    title: 'GEOMETRIC ORNAMENTATION NO. IV',
+    title: 'THE ALL-SEEING MANDALA',
     category: 'Blackwork',
-    imgUrl: 'https://images.unsplash.com/photo-1605647540924-852290f6b0d5?q=80&w=800&auto=format&fit=crop',
-    artist: 'Elena Rostova',
-    dimensions: '22cm x 12cm',
+    imgUrl: '/mandala-all-seeing-eye-forearm-tattoos-calicut.jpg',
+    artist: 'Midhun & Akhil Saju',
+    dimensions: '16cm x 12cm',
+    altText: 'Intricate matching sacred geometry mandalas with the Eye of Providence forearm tattoos, custom styled by Midhun and Akhil Saju at Amazing Tattoo in Calicut.',
   },
   {
     id: 3,
-    title: 'THE MODERN ABSTRACT',
+    title: 'EGYPTIAN ROYALTY',
     category: 'Custom Design',
-    imgUrl: 'https://images.unsplash.com/photo-1590246814883-57f511436533?q=80&w=800&auto=format&fit=crop',
-    artist: 'Marcus Sterling',
-    dimensions: '18cm x 18cm',
+    imgUrl: '/egyptian-goddess-eye-providence-tattoo-kerala.jpg',
+    artist: 'Midhun',
+    dimensions: '20cm x 10cm',
+    altText: 'Detailed black and grey forearm tattoo of an Egyptian queen wearing a tribal cat headdress above the Eye of Providence, created by artist Midhun at Amazing Tattoo in Kerala.',
   },
   {
     id: 4,
-    title: 'DELICATE SPINE FLORA',
-    category: 'Fine Line',
-    imgUrl: 'https://images.unsplash.com/photo-1612459284970-e8f027596582?q=80&w=800&auto=format&fit=crop',
-    artist: 'Valerie Vance',
-    dimensions: '30cm x 6cm',
+    title: 'POLYNESIAN SOUL',
+    category: 'Blackwork',
+    imgUrl: '/polynesian-tribal-calf-tattoo-kozhikode.jpg',
+    artist: 'Midhun',
+    dimensions: '22cm x 14cm',
+    altText: 'Bold Polynesian tribal mask leg tattoo on the calf with sharp blackwork curls and striking red accent eyes, inked by Midhun at Amazing Tattoo in Kozhikode.',
   },
   {
     id: 5,
-    title: 'EULERIAN HARMONICS',
+    title: 'MAHADEV DEVOTION',
     category: 'Custom Design',
-    imgUrl: 'https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=800&auto=format&fit=crop',
-    artist: 'Marcus Sterling',
-    dimensions: '15cm x 15cm',
+    imgUrl: '/lord-shiva-shiva-lingam-tattoo-calicut.jpg',
+    artist: 'Midhun',
+    dimensions: '24cm x 10cm',
+    altText: 'Divine Lord Shiva portrait with a Shiva Lingam forearm tattoo in spiritual black and grey, custom designed and inked by Midhun at Amazing Tattoo, Calicut, Kerala.',
   },
   {
     id: 6,
-    title: 'BLACKWORK CONTINUUM',
+    title: 'THE NORSE WARRIOR',
+    category: 'Custom Design',
+    imgUrl: '/viking-warrior-sword-realism-tattoo-kozhikode.jpg',
+    artist: 'Midhun',
+    dimensions: '20cm x 12cm',
+    altText: 'A highly detailed black and grey realism forearm tattoo of a bearded Viking warrior with a facial scar, holding a sword hilt under his chin, custom designed at Amazing Tattoo in Kozhikode.',
+  },
+  {
+    id: 7,
+    title: 'HORNED SERPENT GODDESS',
     category: 'Blackwork',
-    imgUrl: 'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=800&auto=format&fit=crop',
-    artist: 'Elena Rostova',
-    dimensions: '28cm x 20cm',
+    imgUrl: '/horned-serpent-goddess-skeleton-tattoo-kerala.jpg',
+    artist: 'Midhun',
+    dimensions: '22cm x 11cm',
+    altText: 'A surreal blackwork forearm tattoo of a mystical horned goddess with a coiled snake and an exposed skeletal ribcage, custom designed by Midhun at Amazing Tattoo in Kerala.',
+  },
+  {
+    id: 8,
+    title: 'THE PREDATOR',
+    category: 'Custom Design',
+    imgUrl: '/predator-sci-fi-character-tattoo-calicut.jpg',
+    artist: 'Midhun',
+    dimensions: '12cm x 12cm',
+    altText: 'A circular black and grey realism tattoo of the iconic sci-fi Predator character in its biomechanical helmet with glowing red eyes, inked at Amazing Tattoo in Calicut.',
+  },
+  {
+    id: 9,
+    title: 'CLEOPATRA & PHARAOH SKULL',
+    category: 'Custom Design',
+    imgUrl: '/egyptian-queen-cleopatra-skull-tattoo-kozhikode.jpg',
+    artist: 'Midhun',
+    dimensions: '26cm x 12cm',
+    altText: 'A detailed black and grey realism forearm sleeve tattoo combining a portrait of Egyptian Queen Cleopatra and an ancient pharaoh skull, done by Midhun at Amazing Tattoo in Kozhikode.',
   },
 ];
+
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState<'All' | 'Fine Line' | 'Blackwork' | 'Custom Design'>('All');
@@ -77,7 +112,7 @@ export default function Gallery() {
           <div>
             <span className="luxury-label mb-4 block">02 // THE ARCHIVE</span>
             <h2 className="editorial-title text-[42px] sm:text-[56px] text-text-dark font-light leading-none">
-              FEATURED EXHIBITIONS
+              GALLERY
             </h2>
           </div>
 
@@ -117,7 +152,7 @@ export default function Gallery() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={art.imgUrl}
-                  alt={art.title}
+                  alt={art.altText}
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
                   loading="lazy"
                 />

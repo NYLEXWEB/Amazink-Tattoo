@@ -57,8 +57,7 @@ export default function Footer() {
                 { name: 'Home', id: 'hero' },
                 { name: 'About The Atelier', id: 'about' },
                 { name: 'Resident Masters', id: 'artists' },
-                { name: 'Featured Exhibitions', id: 'gallery' },
-                { name: 'Atelier Offerings', id: 'services' },
+                { name: 'Gallery', id: 'gallery' },
                 { name: 'The Publication', id: 'journal' },
                 { name: 'Concierge Booking', id: 'booking' },
               ].map((item) => (
@@ -81,7 +80,7 @@ export default function Footer() {
             </span>
             <ul className="space-y-3">
               {[
-                { name: 'Instagram', href: 'https://www.instagram.com/p/DOYAkL0Eeyp/?igsh=MXUyOThzaWR3aXFxeQ==' },
+                { name: 'Instagram', href: 'https://www.instagram.com/amazinktattoo_calicut?igsh=MWYzcGo3cG95MGNobA==' },
                 { name: 'Pinterest Editorial', href: 'https://pinterest.com' },
                 { name: 'Vero Journal', href: 'https://vero.co' },
                 { name: 'YSL Atelier Feature', href: '#' },

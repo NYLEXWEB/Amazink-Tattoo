@@ -107,7 +107,7 @@ export default function Artists() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={artist.imageUrl}
-                alt={artist.name}
+                alt={`${artist.name} - Professional Tattoo Artist Calicut & Kozhikode`}
                 className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-104 z-10 relative"
               />
               <div className="absolute bottom-6 left-6 z-20 text-white/80 text-[8px] tracking-[0.4em] uppercase font-semibold pl-2 border-l border-gold">
