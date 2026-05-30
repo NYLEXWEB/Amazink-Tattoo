@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   useEffect(() => {
-    // Scroll fade-in
+    // Initialize IntersectionObserver for scroll fade-up animations
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -26,37 +26,29 @@ export default function Home() {
       { threshold: 0.12 }
     );
 
-    document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
+    const fadeElements = document.querySelectorAll(".fade-up");
+    fadeElements.forEach((el) => observer.observe(el));
 
-    // Smooth nav scroll
-    document.querySelectorAll('a[href^="#"]').forEach((a) => {
-      a.addEventListener("click", (e) => {
-        const href = a.getAttribute("href");
-        if (href) {
-          const target = document.querySelector(href);
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        }
-      });
-    });
-    
-    return () => observer.disconnect();
+    // Cleanup observer on component unmount
+    return () => {
+      fadeElements.forEach((el) => observer.unobserve(el));
+    };
   }, []);
 
   return (
-    <main>
+    <>
       <Navbar />
-      <Hero />
-      <Marquee />
-      <About />
-      <Gallery />
-      <Artists />
-      <Services />
-      <Testimonials />
-      <Booking />
+      <main>
+        <Hero />
+        <Marquee />
+        <About />
+        <Gallery />
+        <Artists />
+        <Services />
+        <Testimonials />
+        <Booking />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
