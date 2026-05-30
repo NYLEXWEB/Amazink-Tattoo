@@ -1,27 +1,61 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Cormorant_Garamond, Inter } from 'next/font/google';
+import './globals.css';
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: "Amazink — Custom Tattoo Studio",
-  description: "A premium custom tattoo studio in Los Angeles. Appointment only. Art always.",
+  title: 'AMAZINK | Luxury Custom Tattoo Studio',
+  description: 'An elite custom tattoo studio focused on artistic storytelling, bespoke design, and premium client experiences. Designed for high-income professionals, artists, and luxury consumers.',
+  keywords: ['Luxury Tattoo', 'Bespoke Tattoo Studio', 'Fine Line Tattoo', 'Minimalist Tattoo', 'Amazink', 'Custom Tattoo Design', 'Premium Tattoo Experience'],
+  openGraph: {
+    title: 'AMAZINK | Luxury Custom Tattoo Studio',
+    description: 'An elite custom tattoo studio focused on artistic storytelling, bespoke design, and premium client experiences.',
+    url: 'https://nylex.online',
+    siteName: 'AMAZINK',
+    images: [
+      {
+        url: '/hero-portrait.png',
+        width: 1200,
+        height: 800,
+        alt: 'AMAZINK Luxury Tattoo Studio',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AMAZINK | Luxury Custom Tattoo Studio',
+    description: 'An elite custom tattoo studio focused on artistic storytelling, bespoke design, and premium client experiences.',
+    images: ['/hero-portrait.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Mono:wght@300;400&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
+    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+      <body className="antialiased bg-white text-text-dark min-h-screen">
         {children}
       </body>
     </html>

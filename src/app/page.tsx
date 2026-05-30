@@ -1,53 +1,51 @@
-"use client";
-
-import React, { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Marquee from "@/components/Marquee";
-import About from "@/components/About";
-import Gallery from "@/components/Gallery";
-import Artists from "@/components/Artists";
-import Services from "@/components/Services";
-import Testimonials from "@/components/Testimonials";
-import Booking from "@/components/Booking";
-import Footer from "@/components/Footer";
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Artists from '@/components/Artists';
+import Gallery from '@/components/Gallery';
+import Services from '@/components/Services';
+import Process from '@/components/Process';
+import Testimonials from '@/components/Testimonials';
+import Journal from '@/components/Journal';
+import Booking from '@/components/Booking';
+import Footer from '@/components/Footer';
 
 export default function Home() {
-  useEffect(() => {
-    // Initialize IntersectionObserver for scroll fade-up animations
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-
-    const fadeElements = document.querySelectorAll(".fade-up");
-    fadeElements.forEach((el) => observer.observe(el));
-
-    // Cleanup observer on component unmount
-    return () => {
-      fadeElements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
   return (
     <>
+      {/* Premium Sticky Navigation */}
       <Navbar />
-      <main>
+
+      <main className="bg-white min-h-screen">
+        {/* Full-viewport Asymmetric Hero */}
         <Hero />
-        <Marquee />
+
+        {/* Storytelling & Atelier Philosophy */}
         <About />
-        <Gallery />
+
+        {/* Resident Master Artist Portfolios */}
         <Artists />
+
+        {/* Minimalist Museum Gallery */}
+        <Gallery />
+
+        {/* Concierge Services List */}
         <Services />
+
+        {/* Architectural Workflow Steps */}
+        <Process />
+
+        {/* High-End Collector Testimonials */}
         <Testimonials />
+
+        {/* Editorial Publications */}
+        <Journal />
+
+        {/* Exclusive Booking Dossier Portal */}
         <Booking />
       </main>
+
+      {/* Luxury Brand Map & Footer */}
       <Footer />
     </>
   );
