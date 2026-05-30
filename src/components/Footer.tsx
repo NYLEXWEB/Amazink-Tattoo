@@ -5,12 +5,8 @@ export default function Footer() {
     <footer>
       <div className="footer-top">
         <div>
-          <div className="footer-brand">
-            AMAZ<span>INK</span>
-          </div>
-          <p className="footer-desc">
-            A premium custom tattoo studio in Los Angeles. Appointment only. Art always.
-          </p>
+          <div className="footer-brand">AMAZ<span>INK</span></div>
+          <p className="footer-desc">A premium custom tattoo studio in Los Angeles. Appointment only. Art always.</p>
         </div>
         <div>
           <p className="footer-heading">Studio</p>
@@ -35,13 +31,7 @@ export default function Footer() {
           <ul className="footer-links">
             <li><a href="mailto:studio@amazink.co">studio@amazink.co</a></li>
             <li><a href="tel:+13235550192">+1 (323) 555-0192</a></li>
-            <li>
-              <span style={{ color: "var(--fog)" }}>
-                4812 Sunset Blvd
-                <br />
-                Los Angeles, CA 90027
-              </span>
-            </li>
+            <li><a href="#">4812 Sunset Blvd<br />Los Angeles, CA 90027</a></li>
             <li style={{ marginTop: "16px" }}><a href="#">Instagram</a></li>
             <li><a href="#">TikTok</a></li>
           </ul>
@@ -49,9 +39,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <p className="footer-copy">© 2025 Amazink Studio. All rights reserved.</p>
-        <p className="footer-copy" style={{ color: "rgba(90,82,74,0.5)" }}>
-          Built with obsession.
-        </p>
+        <p className="footer-copy" style={{ color: "rgba(90,82,74,0.5)" }}>Built with obsession.</p>
       </div>
     </footer>
   );

@@ -17,9 +17,7 @@ export default function Booking() {
         <p className="about-tag">Get In Touch</p>
         <div className="divider"></div>
         <h2 className="section-title">Book a <em>Consultation</em></h2>
-        <p className="about-body" style={{ marginBottom: "36px" }}>
-          All new client work starts with a free 30-minute consultation. Tell us what you're imagining.
-        </p>
+        <p className="about-body" style={{ marginBottom: "36px" }}>All new client work starts with a free 30-minute consultation. Tell us what you're imagining.</p>
         <form onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
@@ -63,9 +61,7 @@ export default function Booking() {
             <label htmlFor="idea">Tell Us Your Idea</label>
             <textarea id="idea" placeholder="Describe your concept, reference images, placement, size…" required></textarea>
           </div>
-          <button type="submit" className="btn-primary" style={{ display: "inline-block", marginTop: "8px", border: "none", cursor: "pointer" }}>
-            Submit Request
-          </button>
+          <button type="submit" className="btn-primary" style={{ display: "inline-block", marginTop: "8px", border: "none", cursor: "pointer" }}>Submit Request</button>
         </form>
       </div>
     </section>

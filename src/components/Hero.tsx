@@ -19,7 +19,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero-right">
-        <img src="https://images.unsplash.com/photo-1598207950893-82cc7e24b13d?w=900&q=80" alt="Tattoo artist at work" />
+        <img src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=700&q=80" alt="Tattoo artist at work" />
       </div>
     </section>
   );
