@@ -4,7 +4,7 @@ export default function Hero() {
   const handleScrollToBooking = () => {
     const element = document.getElementById('booking');
     if (element) {
-      const offset = 90; // Height of navbar
+      const offset = 100; // Adjusted offset for floating navbar + margin
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-[calc(100vh-90px)] mt-[90px] flex items-center bg-white overflow-hidden pb-16 lg:pb-0 border-b border-border-dark/50"
+      className="relative h-[calc(100vh-120px)] mt-[102px] flex items-center bg-white overflow-hidden pb-4 pt-4 lg:pb-0 lg:pt-0 border-b border-border-dark/50 min-h-[580px] lg:min-h-[640px]"
     >
       {/* Background Architectural Grid Accent */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] z-0">
@@ -29,17 +29,17 @@ export default function Hero() {
         <div className="absolute left-[90%] top-0 bottom-0 w-[1px] bg-text-dark"></div>
       </div>
 
-      <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 items-center h-full relative z-10">
-        {/* Left Column: Typography & Story (lg: 6 cols to support overlap) */}
-        <div className="lg:col-span-6 flex flex-col justify-between h-full pt-8 lg:pt-16 pb-8 lg:pb-16 z-20">
+      <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-0 items-center h-full relative z-10">
+        {/* Left Column: Typography & Story (lg: 6 cols) */}
+        <div className="lg:col-span-6 flex flex-col justify-center h-full pt-4 pb-4 z-20">
           <div className="animate-fade-up">
             {/* Architectural Monogram & Branding Index */}
-            <div className="flex items-center space-x-5 mb-12">
-              <div className="relative flex items-center justify-center w-12 h-20 border-l border-gold/45">
-                <span className="font-serif text-xl tracking-[0.25em] text-gold font-light pl-4">
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="relative flex items-center justify-center w-10 h-16 border-l border-gold/45">
+                <span className="font-serif text-lg tracking-[0.25em] text-gold font-light pl-4">
                   N
                 </span>
-                <span className="absolute -top-1.5 left-4 text-[7px] tracking-[0.4em] text-gold/60 uppercase font-bold">
+                <span className="absolute -top-1 left-4 text-[7px] tracking-[0.4em] text-gold/60 uppercase font-bold">
                   AMZ
                 </span>
               </div>
@@ -53,25 +53,25 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Massive Serif Overlapping Headline */}
-            <h1 className="editorial-title text-[52px] sm:text-[76px] xl:text-[96px] text-text-dark leading-[0.9] mb-8 font-extralight tracking-tighter lg:mr-[-100px] relative z-30 drop-shadow-sm">
+            {/* Massive Serif Overlapping Headline - Adjusted size for 100% viewport containment */}
+            <h1 className="editorial-title text-[40px] sm:text-[60px] xl:text-[78px] text-text-dark leading-[0.92] mb-6 font-extralight tracking-tighter lg:mr-[-80px] relative z-30 drop-shadow-sm">
               ART ON SKIN.<br />
               <span className="italic font-light text-gold">DESIGNED</span> TO LAST.
             </h1>
 
             {/* Subtle Gold Axis Line */}
-            <div className="w-24 h-[1px] bg-gold mb-10 animate-line-reveal"></div>
+            <div className="w-20 h-[1px] bg-gold mb-6 animate-line-reveal"></div>
 
             {/* Premium Supporting Copy */}
-            <p className="font-sans text-sm sm:text-base text-text-dark/65 leading-relaxed max-w-md mb-12 font-light tracking-wide">
+            <p className="font-sans text-xs sm:text-sm text-text-dark/65 leading-relaxed max-w-md mb-8 font-light tracking-wide">
               An elite bespoke atelier executing anatomical fine-line and high-contrast blackwork. We harmonize geometry, story, and skin into permanent couture.
             </p>
 
-            {/* Luxury CTA Button */}
+            {/* Solid Rounded-Full Gold CTA Button */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <button
                 onClick={handleScrollToBooking}
-                className="group border border-gold/45 px-12 py-5.5 text-[10px] tracking-[0.35em] text-gold uppercase font-bold transition-all duration-500 hover:bg-gold hover:text-white hover:border-gold flex items-center space-x-3 cursor-pointer shadow-sm relative overflow-hidden"
+                className="group bg-gold hover:bg-[#B39457] text-white px-10 py-4.5 rounded-full text-[10px] tracking-[0.3em] uppercase font-bold transition-all duration-300 flex items-center space-x-3 cursor-pointer shadow-md shadow-gold/10 hover:shadow-lg hover:shadow-gold/20 relative overflow-hidden"
               >
                 <span>INITIATE BRIEF</span>
                 <svg
@@ -83,7 +83,7 @@ export default function Hero() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={1.8}
+                    strokeWidth={2}
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
@@ -95,9 +95,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Scroll Down Vertical Indicator */}
-          <div className="hidden lg:flex items-center space-x-4 mt-20 animate-fade-in delay-500">
-            <div className="h-20 w-[1px] bg-gold/40 relative overflow-hidden">
+          {/* Scroll Down Vertical Indicator - Placed cleanly within viewport bounds */}
+          <div className="hidden lg:flex items-center space-x-4 mt-8 xl:mt-12 animate-fade-in delay-500">
+            <div className="h-14 w-[1px] bg-gold/40 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1/2 bg-gold animate-[bounce_2s_infinite]"></div>
             </div>
             <div className="flex flex-col">
@@ -111,13 +111,13 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Redesigned Merged Image Block (lg: 6 cols) */}
-        <div className="lg:col-span-6 relative flex justify-center items-center h-full w-full py-4 lg:py-0">
-          {/* Subtle Parallax Floating Frame Container */}
-          <div className="relative w-full max-w-[520px] lg:max-w-none aspect-[3/4] lg:h-[78vh] w-[95%] lg:w-[92%] group overflow-visible animate-image-reveal">
+        {/* Right Column: Constrained Merged Image Block (lg: 6 cols) */}
+        <div className="lg:col-span-6 relative flex justify-center items-center h-full w-full py-2 lg:py-0">
+          {/* Subtle Parallax Floating Frame Container - constrained height to fit single screen */}
+          <div className="relative w-full max-w-[420px] lg:max-w-none aspect-[3/4] lg:h-[62vh] w-[90%] lg:w-[88%] group overflow-visible animate-image-reveal">
             
             {/* Outer offset gold luxury border */}
-            <div className="absolute -inset-4 border border-gold/40 transition-transform duration-700 ease-out group-hover:translate-x-1.5 group-hover:-translate-y-1.5 z-0"></div>
+            <div className="absolute -inset-3 border border-gold/40 transition-transform duration-700 ease-out group-hover:translate-x-1 group-hover:-translate-y-1 z-0"></div>
 
             {/* Image Wrapper */}
             <div className="relative w-full h-full overflow-hidden bg-bg-secondary z-10 border border-border-dark shadow-2xl">
@@ -134,12 +134,12 @@ export default function Hero() {
               {/* INTEGRATED INTERESTING STAMPS & BLUEPRINTS (Merged concept) */}
               
               {/* 1. Atelier Stamp (Top Left) */}
-              <div className="absolute top-6 left-6 z-20 bg-white/90 backdrop-blur-sm border border-gold/45 px-3 py-1.5 text-[8px] tracking-[0.25em] text-text-dark uppercase font-semibold hidden md:block">
+              <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-sm border border-gold/45 px-2.5 py-1 text-[7.5px] tracking-[0.25em] text-text-dark uppercase font-semibold hidden md:block">
                 [ DOSSIER NO. 01 // ARCHIVE ]
               </div>
 
               {/* 2. Studio Coordinates Stamp (Top Right) */}
-              <div className="absolute top-6 right-6 z-20 text-white/90 font-mono text-[9px] tracking-[0.15em] font-light hidden md:block">
+              <div className="absolute top-4 right-4 z-20 text-white/90 font-mono text-[8px] tracking-[0.15em] font-light hidden md:block">
                 11.2607° N, 75.7792° E
               </div>
 
@@ -147,32 +147,32 @@ export default function Hero() {
               <div className="absolute inset-0 pointer-events-none opacity-45 z-20 flex items-center justify-center">
                 {/* Horizontal blueprint line */}
                 <div className="w-[85%] h-[1px] bg-gold/35 relative">
-                  <span className="absolute left-2 -top-3 text-[7px] font-mono tracking-widest text-gold/75">X-AXIS</span>
+                  <span className="absolute left-2 -top-3 text-[6.5px] font-mono tracking-widest text-gold/75">X-AXIS</span>
                 </div>
                 {/* Vertical blueprint line */}
                 <div className="absolute h-[85%] w-[1px] bg-gold/35"></div>
                 {/* Micro center crosshair box */}
-                <div className="absolute w-6 h-6 border border-gold/55"></div>
+                <div className="absolute w-5 h-5 border border-gold/55"></div>
               </div>
 
               {/* 4. Fine Needle Placement Dimensions Spec (Center Right) */}
-              <div className="absolute right-6 top-[40%] z-20 border-r border-gold/45 pr-3 text-right hidden lg:block opacity-75">
-                <span className="text-[7px] tracking-[0.3em] text-gold uppercase block font-semibold">PLACEMENT ZONE</span>
-                <span className="text-[8px] text-white tracking-[0.1em] font-mono block mt-0.5">ANATOMY CRITERIA OK</span>
+              <div className="absolute right-4 top-[40%] z-20 border-r border-gold/45 pr-2.5 text-right hidden lg:block opacity-75">
+                <span className="text-[6.5px] tracking-[0.3em] text-gold uppercase block font-semibold">PLACEMENT ZONE</span>
+                <span className="text-[7.5px] text-white tracking-[0.1em] font-mono block mt-0.5">ANATOMY CRITERIA OK</span>
               </div>
 
               {/* 5. Curation Print (Bottom Left) */}
-              <div className="absolute bottom-6 left-6 z-20 flex flex-col text-left">
-                <span className="text-[8px] tracking-[0.35em] text-gold uppercase font-bold">
+              <div className="absolute bottom-4 left-4 z-20 flex flex-col text-left">
+                <span className="text-[7.5px] tracking-[0.35em] text-gold uppercase font-bold">
                   AMZ ATELIER // INCISION
                 </span>
-                <span className="text-[7px] text-white/60 tracking-[0.2em] uppercase font-light mt-0.5">
+                <span className="text-[6.5px] text-white/60 tracking-[0.2em] uppercase font-light mt-0.5">
                   PATRON CAMPAIGN // KOZHIKODE
                 </span>
               </div>
 
               {/* 6. Brand Couture Stamp (Bottom Right) */}
-              <div className="absolute bottom-6 right-6 z-20 text-white/80 font-sans text-[8px] tracking-[0.45em] uppercase font-bold pr-2 border-r border-gold">
+              <div className="absolute bottom-4 right-4 z-20 text-white/80 font-sans text-[7.5px] tracking-[0.45em] uppercase font-bold pr-1.5 border-r border-gold">
                 AMAZINK // COUTURE
               </div>
             </div>

@@ -59,15 +59,15 @@ export default function Home() {
           href="https://wa.me/919946111181"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative flex items-center justify-center w-14 h-14 bg-white border border-gold/45 rounded-full shadow-2xl group-hover:bg-text-dark transition-all duration-500 hover:scale-105 cursor-pointer z-10"
+          className="relative flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] rounded-full shadow-2xl transition-all duration-300 hover:scale-108 cursor-pointer z-10"
           aria-label="Contact Atelier Concierge on WhatsApp"
         >
           {/* Subtle Outer Pulsing Halo */}
-          <span className="absolute -inset-1 border border-gold/25 rounded-full animate-ping opacity-60 group-hover:animate-none"></span>
+          <span className="absolute -inset-1 border border-[#25D366]/40 rounded-full animate-ping opacity-60 group-hover:animate-none"></span>
 
-          {/* Minimal gold SVG WhatsApp Icon */}
+          {/* Minimal white SVG WhatsApp Icon */}
           <svg
-            className="w-6 h-6 text-gold group-hover:text-white transition-colors duration-500"
+            className="w-6 h-6 text-white"
             fill="currentColor"
             viewBox="0 0 24 24"
           >

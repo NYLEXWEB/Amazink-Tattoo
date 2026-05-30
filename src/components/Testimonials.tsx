@@ -97,7 +97,7 @@ export default function Testimonials() {
             href="https://www.google.com/maps/place/Amazink+tattoo+studio+calicut/@11.2606895,75.7765858,17z/data=!4m18!1m9!3m8!1s0x3ba65ebf6972431f:0x28291246983dbf15!2sAmazink+tattoo+studio+calicut!8m2!3d11.2606895!4d75.7791607!9m1!1b1!16s%2Fg%2F11c1r2bq8t!3m7!1s0x3ba65ebf6972431f:0x28291246983dbf15!8m2!3d11.2606895!4d75.7791607!9m1!1b1!16s%2Fg%2F11c1r2bq8t?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-flex items-center justify-center px-10 py-5 bg-text-dark text-white hover:bg-gold hover:text-white border border-text-dark hover:border-gold text-[10px] tracking-[0.3em] uppercase font-semibold transition-all duration-500 group shadow-md z-10 cursor-pointer"
+            className="relative rounded-full inline-flex items-center justify-center px-10 py-5 bg-text-dark text-white hover:bg-gold hover:text-white border border-text-dark hover:border-gold text-[10px] tracking-[0.3em] uppercase font-semibold transition-all duration-500 group shadow-md z-10 cursor-pointer"
           >
             <span>EXPLORE VERIFIED REVIEWS</span>
             <svg

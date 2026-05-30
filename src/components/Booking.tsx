@@ -221,7 +221,7 @@ export default function Booking() {
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="w-full text-center border border-gold bg-transparent text-gold hover:text-white hover:bg-gold py-5 text-[11px] tracking-[0.35em] uppercase font-semibold transition-all duration-500 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
+                  className="w-full text-center bg-gold hover:bg-[#B39457] text-white py-5 rounded-full text-[11px] tracking-[0.35em] uppercase font-bold transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3 shadow-md shadow-gold/10 hover:shadow-lg hover:shadow-gold/20"
                 >
                   {status === 'submitting' ? (
                     <>

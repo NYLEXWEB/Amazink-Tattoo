@@ -8,7 +8,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 15) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -22,7 +22,7 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      const offset = 90; // Height of navbar
+      const offset = 100; // Adjusted offset for floating navbar + margin
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -36,29 +36,30 @@ export default function Navbar() {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full h-[90px] z-50 transition-all duration-500 flex items-center ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-[#C8A96B]/15' 
-          : 'bg-white/80 backdrop-blur-sm border-b border-border-dark'
-      }`}
-    >
-      <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
+    <div className="fixed top-6 left-0 w-full z-50 px-4 md:px-8">
+      {/* Floating Glassmorphic Pill */}
+      <nav
+        className={`w-full max-w-[1300px] mx-auto h-[76px] transition-all duration-500 flex items-center px-6 md:px-10 justify-between ${
+          isScrolled 
+            ? 'bg-white/95 backdrop-blur-md shadow-lg border border-[#C8A96B]/30 rounded-full' 
+            : 'bg-white/80 backdrop-blur-md border border-border-dark/60 rounded-full shadow-md'
+        }`}
+      >
         {/* Left: Brand Logo */}
         <button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="flex flex-col text-left group cursor-pointer"
         >
-          <span className="font-serif text-2xl md:text-3xl tracking-[0.25em] text-text-dark font-light transition-colors duration-300 group-hover:text-gold">
+          <span className="font-serif text-xl md:text-2xl tracking-[0.25em] text-text-dark font-light transition-colors duration-300 group-hover:text-gold">
             AMAZINK
           </span>
-          <span className="text-[8px] tracking-[0.45em] text-text-dark/50 uppercase -mt-0.5 pl-0.5 group-hover:text-gold/80 transition-colors duration-300">
+          <span className="text-[7px] tracking-[0.4em] text-text-dark/50 uppercase -mt-0.5 pl-0.5 group-hover:text-gold/80 transition-colors duration-300">
             TATTOO STUDIO
           </span>
         </button>
 
-        {/* Center: Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center space-x-8 xl:space-x-10">
+        {/* Center: Desktop Links */}
+        <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
           {[
             { name: 'Home', id: 'hero' },
             { name: 'About', id: 'about' },
@@ -71,22 +72,22 @@ export default function Navbar() {
             <button
               key={item.name}
               onClick={() => handleScrollTo(item.id)}
-              className="text-xs uppercase tracking-[0.25em] text-text-dark/70 hover:text-gold transition-colors duration-300 font-medium cursor-pointer"
+              className="text-[10px] uppercase tracking-[0.22em] text-text-dark/70 hover:text-gold transition-colors duration-300 font-semibold cursor-pointer"
             >
               {item.name}
             </button>
           ))}
         </div>
 
-        {/* Right: Book Consultation Button */}
+        {/* Right: Round Solid Golden Button */}
         <div className="hidden lg:block">
           <button
             onClick={() => handleScrollTo('booking')}
-            className="border border-gold text-gold hover:text-white hover:bg-gold px-6 py-3 text-[10px] tracking-[0.3em] uppercase font-medium transition-all duration-500 flex items-center space-x-2 group cursor-pointer"
+            className="bg-gold hover:bg-[#B39457] text-white px-7 py-3 rounded-full text-[10px] tracking-[0.25em] uppercase font-bold transition-all duration-300 flex items-center space-x-2 group cursor-pointer shadow-md shadow-gold/10 hover:shadow-lg hover:shadow-gold/20"
           >
             <span>BOOK APPOINTMENT</span>
             <svg
-              className="w-3 h-3 transform translate-y-[-0.5px] transition-transform duration-300 group-hover:translate-x-1"
+              className="w-3.5 h-3.5 transform translate-y-[-0.5px] transition-transform duration-300 group-hover:translate-x-1"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -94,44 +95,44 @@ export default function Navbar() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={1.5}
+                strokeWidth={2}
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
           </button>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile menu toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none cursor-pointer"
           aria-label="Toggle Navigation Menu"
         >
           <span
-            className={`w-6 h-[1px] bg-text-dark transition-all duration-300 ${
-              isMobileMenuOpen ? 'transform rotate-45 translate-y-[7px]' : ''
+            className={`w-5 h-[1.5px] bg-text-dark transition-all duration-300 ${
+              isMobileMenuOpen ? 'transform rotate-45 translate-y-[6px]' : ''
             }`}
           />
           <span
-            className={`w-6 h-[1px] bg-text-dark transition-all duration-300 ${
+            className={`w-5 h-[1.5px] bg-text-dark transition-all duration-300 ${
               isMobileMenuOpen ? 'opacity-0' : ''
             }`}
           />
           <span
-            className={`w-6 h-[1px] bg-text-dark transition-all duration-300 ${
-              isMobileMenuOpen ? 'transform -rotate-45 -translate-y-[7px]' : ''
+            className={`w-5 h-[1.5px] bg-text-dark transition-all duration-300 ${
+              isMobileMenuOpen ? 'transform -rotate-45 -translate-y-[6px]' : ''
             }`}
           />
         </button>
-      </div>
+      </nav>
 
-      {/* Mobile Drawer Navigation */}
+      {/* Mobile Drawer Dropdown directly below floating Navbar */}
       <div
-        className={`fixed top-[90px] left-0 w-full bg-white border-b border-border-dark lg:hidden transition-all duration-500 ease-in-out overflow-hidden z-40 ${
-          isMobileMenuOpen ? 'max-h-[450px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+        className={`w-full max-w-[1300px] mx-auto mt-2 bg-white/95 backdrop-blur-md border border-[#C8A96B]/25 rounded-3xl lg:hidden transition-all duration-500 ease-in-out overflow-hidden z-40 shadow-xl ${
+          isMobileMenuOpen ? 'max-h-[420px] opacity-100 py-6 px-8' : 'max-h-0 opacity-0 pointer-events-none'
         }`}
       >
-        <div className="px-6 py-8 flex flex-col space-y-6">
+        <div className="flex flex-col space-y-4">
           {[
             { name: 'Home', id: 'hero' },
             { name: 'About', id: 'about' },
@@ -144,19 +145,19 @@ export default function Navbar() {
             <button
               key={item.name}
               onClick={() => handleScrollTo(item.id)}
-              className="text-sm uppercase tracking-[0.2em] text-text-dark/80 hover:text-gold text-left font-medium transition-colors duration-300 cursor-pointer"
+              className="text-xs uppercase tracking-[0.2em] text-text-dark/85 hover:text-gold text-left font-semibold transition-colors duration-300 cursor-pointer"
             >
               {item.name}
             </button>
           ))}
           <button
             onClick={() => handleScrollTo('booking')}
-            className="w-full text-center border border-gold text-gold hover:text-white hover:bg-gold py-4 text-xs tracking-[0.25em] uppercase font-semibold transition-all duration-500 cursor-pointer"
+            className="w-full text-center bg-gold hover:bg-[#B39457] text-white py-3.5 rounded-full text-xs tracking-[0.22em] uppercase font-bold transition-all duration-300 cursor-pointer shadow-md shadow-gold/10"
           >
             BOOK APPOINTMENT
           </button>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }
