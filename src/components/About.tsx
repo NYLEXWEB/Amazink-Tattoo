@@ -7,23 +7,23 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           {/* Left Column: Asymmetric Image Presentation */}
           <div className="lg:col-span-6 relative">
-            <div className="relative w-full aspect-[4/5] max-w-[500px] mx-auto lg:mx-0 group">
+            <div className="relative w-full aspect-[4/3] max-w-[620px] mx-auto lg:mx-0 group">
               {/* Offset border */}
               <div className="absolute -inset-4 border border-gold/35 translate-x-3 translate-y-3 transition-transform duration-750 ease-out group-hover:translate-x-0 group-hover:translate-y-0"></div>
               
-              <div className="relative w-full h-full overflow-hidden bg-white border border-border-dark shadow-lg">
+              <div className="relative w-full h-full overflow-hidden bg-white border border-border-dark shadow-xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?q=80&w=800&auto=format&fit=crop"
-                  alt="AMAZINK Luxury Studio Space"
-                  className="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-103"
+                  src="/philosophy-reference.jpg"
+                  alt="AMAZINK Philosophy Overlapping Curation"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
               </div>
 
               {/* Float aesthetic badge */}
-              <div className="absolute -bottom-6 -right-6 bg-white border border-gold/30 px-6 py-6 hidden sm:flex flex-col items-center justify-center shadow-md">
+              <div className="absolute -bottom-6 -right-6 bg-white border border-gold/30 px-6 py-6 hidden sm:flex flex-col items-center justify-center shadow-md z-10">
                 <span className="font-serif text-3xl text-gold font-light tracking-widest">
                   X
                 </span>
