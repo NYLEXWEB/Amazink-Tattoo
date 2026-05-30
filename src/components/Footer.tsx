@@ -81,7 +81,7 @@ export default function Footer() {
             </span>
             <ul className="space-y-3">
               {[
-                { name: 'Instagram', href: 'https://instagram.com' },
+                { name: 'Instagram', href: 'https://www.instagram.com/p/DOYAkL0Eeyp/?igsh=MXUyOThzaWR3aXFxeQ==' },
                 { name: 'Pinterest Editorial', href: 'https://pinterest.com' },
                 { name: 'Vero Journal', href: 'https://vero.co' },
                 { name: 'YSL Atelier Feature', href: '#' },

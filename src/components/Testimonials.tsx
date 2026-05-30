@@ -67,6 +67,54 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+
+        {/* Google Verified Review Curation CTA */}
+        <div className="mt-24 border border-gold/30 p-8 sm:p-12 bg-bg-secondary relative group overflow-hidden max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+          {/* Elegant corners */}
+          <div className="absolute top-3 left-3 w-3 h-3 border-t border-l border-gold/40"></div>
+          <div className="absolute top-3 right-3 w-3 h-3 border-t border-r border-gold/40"></div>
+          <div className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-gold/40"></div>
+          <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-gold/40"></div>
+
+          <div className="space-y-3 text-center md:text-left relative z-10">
+            <div className="flex items-center justify-center md:justify-start space-x-3">
+              <span className="text-[9px] tracking-[0.25em] bg-white border border-gold/30 text-gold px-3 py-1 font-semibold uppercase">
+                GOOGLE VERIFIED ATELIER
+              </span>
+              <div className="flex text-gold space-x-0.5 text-sm">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+            </div>
+            <h3 className="font-serif text-2xl sm:text-3xl text-text-dark font-light tracking-wide">
+              AMAZINK TATTOO STUDIO CALICUT
+            </h3>
+            <p className="font-sans text-[10px] sm:text-xs text-text-dark/50 tracking-wider font-light uppercase">
+              Rated 4.9 stars by over 250+ clients for ultimate precision & sterile luxury.
+            </p>
+          </div>
+
+          <a
+            href="https://www.google.com/maps/place/Amazink+tattoo+studio+calicut/@11.2606895,75.7765858,17z/data=!4m18!1m9!3m8!1s0x3ba65ebf6972431f:0x28291246983dbf15!2sAmazink+tattoo+studio+calicut!8m2!3d11.2606895!4d75.7791607!9m1!1b1!16s%2Fg%2F11c1r2bq8t!3m7!1s0x3ba65ebf6972431f:0x28291246983dbf15!8m2!3d11.2606895!4d75.7791607!9m1!1b1!16s%2Fg%2F11c1r2bq8t?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-flex items-center justify-center px-10 py-5 bg-text-dark text-white hover:bg-gold hover:text-white border border-text-dark hover:border-gold text-[10px] tracking-[0.3em] uppercase font-semibold transition-all duration-500 group shadow-md z-10 cursor-pointer"
+          >
+            <span>EXPLORE VERIFIED REVIEWS</span>
+            <svg
+              className="w-4 h-4 ml-3 transform transition-transform duration-300 group-hover:translate-x-1.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.8}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );
