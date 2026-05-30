@@ -6,7 +6,6 @@ type ArtistProfile = {
   role: string;
   specialty: string;
   experience: string;
-  awards: string[];
   philosophy: string;
   quote: string;
   signature: string;
@@ -19,10 +18,6 @@ const ARTISTS: ArtistProfile[] = [
     role: 'Founder & Principal Master Artist',
     specialty: 'Surrealism, Sacred Geometry, Realism & Bold Blackwork',
     experience: '12 Years of Couture Needlework',
-    awards: [
-      'Best in Blackwork — Kozhikode Tattoo Festival 2025',
-      'Master of Realism Award — South India Tattoo Convention 2024',
-    ],
     philosophy: 'Body art should behave as a custom-fit canvas for individual stories. I analyze the unique flow of muscle and bone structures to design permanent visual masterpieces that harmonize with the body, delivering originality and uncompromising precision at our hygienic Calicut studio.',
     quote: "Every line drawn is an indelible legacy; custom ink is a conversation that lasts a lifetime.",
     signature: 'Midhun KV',
@@ -84,31 +79,14 @@ export default function Artists() {
               </div>
             </div>
 
-            {/* Awards & Signature Footer */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8 border-t border-border-dark/30 max-w-2xl mx-auto w-full mt-10">
-              {/* Accolades */}
-              <div className="text-center sm:text-left">
-                <span className="text-[9px] tracking-[0.25em] text-text-dark/40 uppercase block mb-3 font-semibold">
-                  SELECT ACCOLADES
-                </span>
-                <ul className="space-y-2">
-                  {artist.awards.map((award, i) => (
-                    <li key={i} className="text-xs text-text-dark/80 font-light leading-snug">
-                      • {award}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Signature */}
-              <div className="flex flex-col items-center sm:items-end justify-center">
-                <span className="text-[9px] tracking-[0.25em] text-text-dark/40 uppercase block mb-2 font-semibold">
-                  OFFICIAL SIGNATURE
-                </span>
-                <span className="font-serif text-3xl italic text-gold font-light select-none tracking-widest mt-1">
-                  {artist.signature}
-                </span>
-              </div>
+            {/* Signature Footer */}
+            <div className="pt-8 border-t border-border-dark/30 max-w-2xl mx-auto w-full mt-10 flex flex-col items-center justify-center">
+              <span className="text-[9px] tracking-[0.25em] text-text-dark/40 uppercase block mb-2 font-semibold text-center">
+                OFFICIAL ATELIER SIGNATURE
+              </span>
+              <span className="font-serif text-4.5xl italic text-gold font-light select-none tracking-widest mt-1 text-center">
+                {artist.signature}
+              </span>
             </div>
           </div>
         </div>
