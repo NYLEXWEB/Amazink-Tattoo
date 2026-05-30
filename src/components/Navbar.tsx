@@ -50,11 +50,16 @@ export default function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="flex flex-col text-left group cursor-pointer"
         >
-          <span className="font-serif text-xl md:text-2xl tracking-[0.25em] text-text-dark font-light transition-colors duration-300 group-hover:text-gold">
-            AMAZINK
-          </span>
-          <span className="text-[7px] tracking-[0.4em] text-text-dark/50 uppercase -mt-0.5 pl-0.5 group-hover:text-gold/80 transition-colors duration-300">
-            TATTOO STUDIO
+          <div className="flex items-start">
+            <span className="font-serif text-xl md:text-2xl tracking-[0.25em] text-text-dark font-light transition-colors duration-300 group-hover:text-gold">
+              AMAZIN<span className="text-gold transition-colors duration-500 group-hover:text-text-dark font-medium">K</span>
+            </span>
+            <span className="text-[8px] text-gold/80 ml-0.5 font-light relative -top-1 group-hover:rotate-12 transition-transform duration-500 block">
+              ®
+            </span>
+          </div>
+          <span className="text-[7px] tracking-[0.45em] text-text-dark/50 uppercase -mt-0.5 pl-0.5 group-hover:text-gold/80 transition-colors duration-300 font-bold">
+            COUTURE ATELIER
           </span>
         </button>
 
