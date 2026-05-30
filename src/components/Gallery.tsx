@@ -118,7 +118,7 @@ export default function Gallery() {
                 <img
                   src={art.imgUrl}
                   alt={art.title}
-                  className="w-full h-full object-cover grayscale contrast-110 transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
+                  className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
                   loading="lazy"
                 />
                 

@@ -65,7 +65,7 @@ export default function Journal() {
                   <img
                     src={article.imageUrl}
                     alt={article.title}
-                    className="w-full h-full object-cover grayscale contrast-110 transition-transform duration-1000 group-hover:scale-103 relative z-10"
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103 relative z-10"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/5 z-20 pointer-events-none"></div>
