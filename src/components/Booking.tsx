@@ -7,10 +7,7 @@ export default function Booking() {
     name: '',
     email: '',
     phone: '',
-    artist: 'valerie',
-    service: 'fine-line',
-    placement: '',
-    details: '',
+    message: '',
   });
   
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -26,10 +23,7 @@ export default function Booking() {
         name: '',
         email: '',
         phone: '',
-        artist: 'valerie',
-        service: 'fine-line',
-        placement: '',
-        details: '',
+        message: '',
       });
     }, 1800);
   };
@@ -43,20 +37,20 @@ export default function Booking() {
   };
 
   return (
-    <section id="booking" className="section-spacing bg-white overflow-hidden relative">
+    <section id="contact" className="section-spacing bg-white overflow-hidden relative">
       {/* Decorative Gold Accent Vertical Line */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1px] h-32 bg-gold/30"></div>
 
       <div className="museum-container pt-12">
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center mb-20">
-          <span className="luxury-label mb-6 block">08 // REGISTRATION</span>
+          <span className="luxury-label mb-6 block">07 // CONTACT</span>
           <h2 className="editorial-title text-[48px] sm:text-[64px] text-text-dark font-light leading-none mb-6">
-            BOOK A CONSULTATION
+            CONTACT THE ATELIER
           </h2>
           <div className="w-16 h-[1px] bg-gold mx-auto mb-8"></div>
           <p className="font-sans text-sm text-text-dark/60 leading-relaxed font-light max-w-lg mx-auto">
-            Our bookings are highly exclusive and scheduled by invitation only. Please submit your conceptual brief below to coordinate a private atelier consultation.
+            Please submit your message or custom design inquiry below to coordinate with our private studio concierge.
           </p>
         </div>
 
@@ -76,16 +70,16 @@ export default function Booking() {
                 </svg>
               </div>
               <h3 className="font-serif text-2xl text-text-dark font-light tracking-wide mb-4">
-                REQUEST RECEIVED
+                MESSAGE REGISTERED
               </h3>
               <p className="font-sans text-xs sm:text-sm text-text-dark/60 leading-relaxed font-light max-w-md mx-auto mb-8">
-                Your dossier has been registered in our central archives. A dedicated studio concierge will contact you within 48 hours to discuss scheduling options.
+                Your inquiry has been archived in our records. A dedicated studio concierge will respond to your message within 48 hours.
               </p>
               <button
                 onClick={() => setStatus('idle')}
                 className="text-xs uppercase tracking-[0.25em] text-gold border-b border-gold pb-1 font-semibold hover:text-text-dark hover:border-text-dark transition-colors duration-300"
               >
-                SUBMIT ANOTHER DOSSIER
+                SEND ANOTHER MESSAGE
               </button>
             </div>
           ) : (
@@ -143,75 +137,21 @@ export default function Booking() {
                     className="border-b border-border-dark focus:border-gold py-3 text-sm font-light text-text-dark bg-transparent outline-none transition-colors duration-300"
                   />
                 </div>
-
-                {/* Desired Placement */}
-                <div className="flex flex-col">
-                  <label htmlFor="placement" className="text-[10px] tracking-[0.2em] uppercase text-text-dark/50 font-semibold mb-2">
-                    DESIRED PLACEMENT (e.g. Spine, Forearm)
-                  </label>
-                  <input
-                    type="text"
-                    id="placement"
-                    name="placement"
-                    value={formData.placement}
-                    onChange={handleInputChange}
-                    placeholder="Left forearm, inner sleeve"
-                    className="border-b border-border-dark focus:border-gold py-3 text-sm font-light text-text-dark bg-transparent outline-none transition-colors duration-300"
-                  />
-                </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {/* Artist Selector */}
-                <div className="flex flex-col">
-                  <label htmlFor="artist" className="text-[10px] tracking-[0.2em] uppercase text-text-dark/50 font-semibold mb-2">
-                    PREFERRED MASTER ARTIST
-                  </label>
-                  <select
-                    id="artist"
-                    name="artist"
-                    value={formData.artist}
-                    onChange={handleInputChange}
-                    className="border-b border-border-dark focus:border-gold py-3 text-sm font-light text-text-dark bg-transparent outline-none transition-colors duration-300 cursor-pointer appearance-none"
-                  >
-                    <option value="valerie">VALERIE VANCE — Fine Line</option>
-                    <option value="marcus">MARCUS STERLING — Architectural</option>
-                    <option value="elena">ELENA ROSTOVA — Blackwork</option>
-                  </select>
-                </div>
-
-                {/* Style Selector */}
-                <div className="flex flex-col">
-                  <label htmlFor="service" className="text-[10px] tracking-[0.2em] uppercase text-text-dark/50 font-semibold mb-2">
-                    DESIRED INCISION STYLE
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="border-b border-border-dark focus:border-gold py-3 text-sm font-light text-text-dark bg-transparent outline-none transition-colors duration-300 cursor-pointer appearance-none"
-                  >
-                    <option value="fine-line">Fine Line & Geometrics</option>
-                    <option value="blackwork">Editorial Blackwork</option>
-                    <option value="custom-design">Bespoke Concept Commission</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Conceptual Details */}
+              {/* Message */}
               <div className="flex flex-col">
-                <label htmlFor="details" className="text-[10px] tracking-[0.2em] uppercase text-text-dark/50 font-semibold mb-2">
-                  CONCEPTUAL BRIEF & NARRATIVE DETAILS *
+                <label htmlFor="message" className="text-[10px] tracking-[0.2em] uppercase text-text-dark/50 font-semibold mb-2">
+                  YOUR MESSAGE *
                 </label>
                 <textarea
-                  id="details"
-                  name="details"
+                  id="message"
+                  name="message"
                   required
                   rows={4}
-                  value={formData.details}
+                  value={formData.message}
                   onChange={handleInputChange}
-                  placeholder="Outline the conceptual elements, size constraints, stories, and visual pacing you wish to embed."
+                  placeholder="Outline your inquiry, concepts, or details you wish to share with the atelier."
                   className="border-b border-border-dark focus:border-gold py-3 text-sm font-light text-text-dark bg-transparent outline-none transition-all duration-300 resize-none"
                 />
               </div>
@@ -225,7 +165,7 @@ export default function Booking() {
                 >
                   {status === 'submitting' ? (
                     <>
-                      <span>REGISTERING IN ARCHIVES...</span>
+                      <span>SENDING MESSAGE...</span>
                       <svg className="animate-spin h-4 w-4 text-gold group-hover:text-white" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
@@ -233,7 +173,7 @@ export default function Booking() {
                     </>
                   ) : (
                     <>
-                      <span>SUBMIT CONCEPT BRIEF Dossier</span>
+                      <span>SEND MESSAGE</span>
                       <svg
                         className="w-4 h-4 transform translate-y-[-0.5px]"
                         fill="none"

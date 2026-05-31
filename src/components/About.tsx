@@ -6,30 +6,30 @@ export default function About() {
       <div className="museum-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           {/* Left Column: Asymmetric Image Presentation */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative w-full aspect-[4/3] max-w-[620px] mx-auto lg:mx-0 group">
-              {/* Offset border */}
-              <div className="absolute -inset-4 border border-gold/35 translate-x-3 translate-y-3 transition-transform duration-750 ease-out group-hover:translate-x-0 group-hover:translate-y-0"></div>
-              
-              <div className="relative w-full h-full overflow-hidden bg-white border border-border-dark shadow-xl">
+          <div className="lg:col-span-6 relative pb-10 pr-10">
+            <div className="relative w-full aspect-[4/3.8] max-w-[580px] mx-auto lg:mx-0 group">
+              {/* Background Landscape Image (Left/Top) */}
+              <div className="w-[72%] aspect-[4/4.5] overflow-hidden bg-white border border-border-dark shadow-xl relative z-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/philosophy-reference.jpg"
-                  alt="Amazink Tattoo Calicut - Best Tattoo Studio in Calicut and Kozhikode Kerala"
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103"
+                  src="/about-landscape.png"
+                  alt="Amazink Atelier Inspiration - Exquisite Fine Line Tattoo Work"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-102"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
               </div>
 
-              {/* Float aesthetic badge */}
-              <div className="absolute -bottom-6 -right-6 bg-white border border-gold/30 px-6 py-6 hidden sm:flex flex-col items-center justify-center shadow-md z-10">
-                <span className="font-serif text-3xl text-gold font-light tracking-widest">
-                  X
-                </span>
-                <span className="text-[7px] tracking-[0.4em] text-text-dark/40 uppercase mt-1">
-                  YEARS ELITE
-                </span>
+              {/* Foreground Tattoo Image (Right/Bottom) */}
+              <div className="absolute bottom-[-10%] right-[-6%] w-[58%] aspect-[4/4.5] overflow-hidden bg-white border-8 border-white shadow-2xl z-10 transition-transform duration-750 hover:scale-[1.03]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/about-tattoo.png"
+                  alt="Amazink Couture Tattoo - Masterful Blackwork back tattoo detailing"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/5 pointer-events-none"></div>
               </div>
             </div>
           </div>

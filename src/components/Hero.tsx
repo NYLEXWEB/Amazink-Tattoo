@@ -1,8 +1,8 @@
 'use client';
 
 export default function Hero() {
-  const handleScrollToBooking = () => {
-    const element = document.getElementById('booking');
+  const handleScrollToContact = () => {
+    const element = document.getElementById('contact');
     if (element) {
       const offset = 100; // Adjusted offset for floating navbar + margin
       const bodyRect = document.body.getBoundingClientRect().top;
@@ -71,7 +71,7 @@ export default function Hero() {
             {/* Solid Rounded-Full Gold CTA Button */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <button
-                onClick={handleScrollToBooking}
+                onClick={handleScrollToContact}
                 className="group bg-gold hover:bg-[#B39457] text-white px-10 py-4.5 rounded-full text-[10px] tracking-[0.3em] uppercase font-bold transition-all duration-300 flex items-center space-x-3 cursor-pointer shadow-md shadow-gold/10 hover:shadow-lg hover:shadow-gold/20 relative overflow-hidden"
               >
                 <span>INITIATE BRIEF</span>

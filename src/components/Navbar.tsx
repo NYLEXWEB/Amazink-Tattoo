@@ -70,8 +70,7 @@ export default function Navbar() {
             { name: 'About', id: 'about' },
             { name: 'Artists', id: 'artists' },
             { name: 'Gallery', id: 'gallery' },
-            { name: 'Journal', id: 'journal' },
-            { name: 'Contact', id: 'booking' },
+            { name: 'Contact', id: 'contact' },
           ].map((item) => (
             <button
               key={item.name}
@@ -85,8 +84,10 @@ export default function Navbar() {
 
         {/* Right: Round Solid Golden Button */}
         <div className="hidden lg:block">
-          <button
-            onClick={() => handleScrollTo('booking')}
+          <a
+            href="https://wa.me/919946111181?text=Hello%20Amazink%20Tattoo%20Studio%2C%20I%20would%20like%20to%20book%20a%20consultation%20appointment."
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gold hover:bg-[#B39457] text-white px-7 py-3 rounded-full text-[10px] tracking-[0.25em] uppercase font-bold transition-all duration-300 flex items-center space-x-2 group cursor-pointer shadow-md shadow-gold/10 hover:shadow-lg hover:shadow-gold/20"
           >
             <span>BOOK APPOINTMENT</span>
@@ -103,7 +104,7 @@ export default function Navbar() {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </button>
+          </a>
         </div>
 
         {/* Mobile menu toggle */}
@@ -142,8 +143,7 @@ export default function Navbar() {
             { name: 'About', id: 'about' },
             { name: 'Artists', id: 'artists' },
             { name: 'Gallery', id: 'gallery' },
-            { name: 'Journal', id: 'journal' },
-            { name: 'Contact', id: 'booking' },
+            { name: 'Contact', id: 'contact' },
           ].map((item) => (
             <button
               key={item.name}
@@ -154,12 +154,14 @@ export default function Navbar() {
             </button>
           ))}
 
-          <button
-            onClick={() => handleScrollTo('booking')}
-            className="w-full text-center bg-gold hover:bg-[#B39457] text-white py-3.5 rounded-full text-xs tracking-[0.22em] uppercase font-bold transition-all duration-300 cursor-pointer shadow-md shadow-gold/10"
+          <a
+            href="https://wa.me/919946111181?text=Hello%20Amazink%20Tattoo%20Studio%2C%20I%20would%20like%20to%20book%20a%20consultation%20appointment."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full text-center block bg-gold hover:bg-[#B39457] text-white py-3.5 rounded-full text-xs tracking-[0.22em] uppercase font-bold transition-all duration-300 cursor-pointer shadow-md shadow-gold/10"
           >
             BOOK APPOINTMENT
-          </button>
+          </a>
         </div>
       </div>
     </div>
