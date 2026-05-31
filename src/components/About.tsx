@@ -37,7 +37,7 @@ export default function About() {
           {/* Right Column: Editorial Text & Philosophy */}
           <div className="lg:col-span-6 flex flex-col justify-center">
             {/* Small Gold Tag */}
-            <span className="luxury-label mb-6">01 // THE PHILOSOPHY</span>
+            <span className="luxury-label mb-6">01 // ABOUT US</span>
 
             {/* Serif Heading */}
             <h2 className="editorial-title text-[42px] sm:text-[56px] text-text-dark leading-[1.05] mb-8 font-light">

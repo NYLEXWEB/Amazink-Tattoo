@@ -38,12 +38,13 @@ export default function Footer() {
             
             <div className="mt-6">
               <span className="text-[11px] tracking-[0.25em] text-gold font-semibold uppercase block">
-                SECURE ATELIER LOCATIONS
+                STUDIO LOCATION
               </span>
               <div className="w-8 h-[1px] bg-gold/40 mt-2 mb-3"></div>
               <p className="text-sm text-text-dark/85 font-light tracking-wide leading-relaxed">
-                Suite 404, Bond Street, London, W1S <br />
-                84 Rue du Faubourg Saint-Honoré, Paris, 75008
+                HDFC bank building Society Building, 673001, <br />
+                YMCA Cross Rd, near Malabar christian college, <br />
+                Kozhikode, Kerala 673001, India
               </p>
             </div>
           </div>
@@ -57,10 +58,10 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {[
                 { name: 'Home', id: 'hero' },
-                { name: 'About The Atelier', id: 'about' },
+                { name: 'About Us', id: 'about' },
                 { name: 'Resident Masters', id: 'artists' },
                 { name: 'Gallery', id: 'gallery' },
-                { name: 'Concierge Contact', id: 'contact' },
+                { name: 'Contact Us', id: 'contact' },
               ].map((item) => (
                 <li key={item.name}>
                   <button
@@ -83,9 +84,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {[
                 { name: 'Instagram', href: 'https://www.instagram.com/amazinktattoo_calicut?igsh=MWYzcGo3cG95MGNobA==' },
-                { name: 'Pinterest Editorial', href: 'https://pinterest.com' },
-                { name: 'Vero Journal', href: 'https://vero.co' },
-                { name: 'YSL Atelier Feature', href: '#' },
+                { name: 'Facebook', href: 'https://www.facebook.com/AmazinktattoosIndia' },
               ].map((item) => (
                 <li key={item.name}>
                   <a
@@ -109,16 +108,22 @@ export default function Footer() {
             <div className="w-8 h-[1px] bg-gold/40 mt-2 mb-5"></div>
             <ul className="space-y-3.5 text-sm text-text-dark/75 font-light tracking-wide">
               <li>
-                <span className="text-text-dark/60 block text-[10px] tracking-[0.1em] font-semibold">TUES - SAT</span>
-                11:00 AM — 07:00 PM
-              </li>
-              <li>
-                <span className="text-text-dark/60 block text-[10px] tracking-[0.1em] font-semibold">SUN - MON</span>
-                Strictly Closed
+                <span className="text-text-dark/60 block text-[10px] tracking-[0.1em] font-semibold">SUNDAY - SATURDAY</span>
+                <span className="block text-xs text-text-dark/70 font-light mt-1.5 space-y-1">
+                  <span>Sunday: Open 24 hours</span><br />
+                  <span>Monday: Open 24 hours</span><br />
+                  <span>Tuesday: Open 24 hours</span><br />
+                  <span>Wednesday: Open 24 hours</span><br />
+                  <span>Thursday: Open 24 hours</span><br />
+                  <span>Friday: Open 24 hours</span><br />
+                  <span>Saturday: Open 24 hours</span>
+                </span>
               </li>
               <li>
                 <span className="text-text-dark/60 block text-[10px] tracking-[0.1em] font-semibold">CONTACT</span>
-                atelier@amazink.online
+                <a href="mailto:amazinktattoos209@gmail.com" className="hover:text-gold transition-colors duration-300">
+                  amazinktattoos209@gmail.com
+                </a>
               </li>
             </ul>
           </div>
@@ -131,7 +136,7 @@ export default function Footer() {
             <div className="w-8 h-[1px] bg-gold/40 mt-2 mb-5"></div>
             <div className="relative w-full h-36 rounded-sm border border-border-dark/30 overflow-hidden group shadow-sm bg-white">
               <iframe
-                src="https://maps.google.com/maps?q=Suite%20404,%20Bond%20Street,%20London&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=AMAZINK%2BTATTOO%2BAmazink%2BTattoo%2BIndia%2BYMCA%2BCross%2BRoad%2BNear%2BHDFC%2BBANK%2B1st%2BFloor%2BNear%2BBalus%2BSaloon%2BOpp%2BMyG%2BYmca&sll=11.2604,75.7793&t=&z=14&ie=UTF8&iwloc=&output=embed"
                 className="absolute inset-0 w-full h-full border-0 opacity-95 group-hover:opacity-100 transition-opacity duration-300"
                 allowFullScreen={false}
                 loading="lazy"
@@ -142,7 +147,7 @@ export default function Footer() {
               <div className="absolute bottom-2 right-2 w-2 h-2 border-b border-r border-gold/40 pointer-events-none"></div>
             </div>
             <a
-              href="https://maps.google.com/?q=Suite%20404,%20Bond%20Street,%20London"
+              href="https://maps.google.com/maps?q=AMAZINK%2BTATTOO%2BAmazink%2BTattoo%2BIndia%2BYMCA%2BCross%2BRoad%2BNear%2BHDFC%2BBANK%2B1st%2BFloor%2BNear%2BBalus%2BSaloon%2BOpp%2BMyG%2BYmca&sll=11.2604,75.7793"
               target="_blank"
               rel="noreferrer"
               className="text-[10px] tracking-[0.2em] text-gold hover:text-text-dark transition-colors duration-300 uppercase font-semibold mt-2.5 inline-block text-left"

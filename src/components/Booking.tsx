@@ -16,8 +16,16 @@ export default function Booking() {
     e.preventDefault();
     setStatus('submitting');
     
-    // Simulate luxury API call with artificial delay
+    // Prefill mailto parameters and open client
+    const subject = encodeURIComponent(`Amazink Tattoo Inquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoUrl = `mailto:amazinktattoos209@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Simulate luxury API call with artificial delay, then open mail client
     setTimeout(() => {
+      window.location.href = mailtoUrl;
       setStatus('success');
       setFormData({
         name: '',
@@ -25,7 +33,7 @@ export default function Booking() {
         phone: '',
         message: '',
       });
-    }, 1800);
+    }, 1200);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -46,7 +54,7 @@ export default function Booking() {
         <div className="max-w-2xl mx-auto text-center mb-20">
           <span className="luxury-label mb-6 block">07 // CONTACT</span>
           <h2 className="editorial-title text-[48px] sm:text-[64px] text-text-dark font-light leading-none mb-6">
-            CONTACT THE ATELIER
+            CONTACT US
           </h2>
           <div className="w-16 h-[1px] bg-gold mx-auto mb-8"></div>
           <p className="font-sans text-sm text-text-dark/60 leading-relaxed font-light max-w-lg mx-auto">
@@ -133,7 +141,7 @@ export default function Booking() {
                     required
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="+1 (555) 019-2834"
+                    placeholder="+91 "
                     className="border-b border-border-dark focus:border-gold py-3 text-sm font-light text-text-dark bg-transparent outline-none transition-colors duration-300"
                   />
                 </div>
