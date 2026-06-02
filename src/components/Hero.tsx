@@ -35,14 +35,6 @@ export default function Hero() {
           <div className="animate-fade-up">
             {/* Architectural Monogram & Branding Index */}
             <div className="flex items-center space-x-4 mb-6">
-              <div className="relative flex items-center justify-center w-10 h-16 border-l border-gold/45">
-                <span className="font-serif text-lg tracking-[0.25em] text-gold font-light pl-4">
-                  N
-                </span>
-                <span className="absolute -top-1 left-4 text-[7px] tracking-[0.4em] text-gold/60 uppercase font-bold">
-                  AMZ
-                </span>
-              </div>
               <div className="flex flex-col">
                 <span className="text-[10px] tracking-[0.35em] text-text-dark/45 uppercase font-bold">
                   AMAZINK TATTOO STUDIO
