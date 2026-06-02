@@ -5,7 +5,7 @@ import { useState } from 'react';
 type Artwork = {
   id: number;
   title: string;
-  category: 'Fine Line' | 'Blackwork' | 'Custom Design';
+  category: 'Blackwork' | 'Custom Design';
   imgUrl: string;
   artist: string;
   dimensions: string;
@@ -98,7 +98,7 @@ const ARTWORKS: Artwork[] = [
 
 
 export default function Gallery() {
-  const [activeCategory, setActiveCategory] = useState<'All' | 'Fine Line' | 'Blackwork' | 'Custom Design'>('All');
+  const [activeCategory, setActiveCategory] = useState<'All' | 'Blackwork' | 'Custom Design'>('All');
 
   const filteredArtworks = activeCategory === 'All' 
     ? ARTWORKS 
@@ -118,7 +118,7 @@ export default function Gallery() {
 
           {/* Luxury Categories Filter Tab */}
           <div className="flex flex-wrap gap-x-8 gap-y-3 mt-8 md:mt-0 border-b border-border-dark/60 pb-2">
-            {(['All', 'Fine Line', 'Blackwork', 'Custom Design'] as const).map((category) => (
+            {(['All', 'Blackwork', 'Custom Design'] as const).map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}

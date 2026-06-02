@@ -90,7 +90,14 @@ export default function Home() {
       </main>
 
       {/* Floating Google Review Button */}
-      <div className="fixed bottom-50 md:bottom-64 right-6 md:right-8 z-50 flex items-center group">
+      <div className="fixed bottom-58 md:bottom-64 right-6 md:right-8 z-50 flex items-center group">
+        {/* Mobile Google Label directly at the top */}
+        <div className="absolute -top-7.5 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white border border-gold/45 px-2.5 py-0.5 rounded-full shadow-md shadow-black/30 sm:hidden whitespace-nowrap z-20">
+          <span className="text-[7.5px] tracking-[0.22em] uppercase font-bold text-white">
+           REVIEW
+          </span>
+        </div>
+
         {/* Slide-out Text Label */}
         <div className="bg-text-dark text-white border border-gold/30 px-4 py-2.5 mr-3 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 pointer-events-none transition-all duration-500 ease-out shadow-lg hidden sm:block">
           <span className="text-[9px] tracking-[0.3em] uppercase font-semibold text-gold">
@@ -135,7 +142,14 @@ export default function Home() {
       </div>
 
       {/* Floating Instagram Button */}
-      <div className="fixed bottom-28 md:bottom-36 right-6 md:right-8 z-50 flex items-center group">
+      <div className="fixed bottom-32 md:bottom-36 right-6 md:right-8 z-50 flex items-center group">
+        {/* Mobile Instagram Label directly at the top */}
+        <div className="absolute -top-7.5 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white border border-gold/45 px-2.5 py-0.5 rounded-full shadow-md shadow-black/30 sm:hidden whitespace-nowrap z-20">
+          <span className="text-[7.5px] tracking-[0.22em] uppercase font-bold text-white">
+            INSTAGRAM
+          </span>
+        </div>
+
         {/* Slide-out Text Label */}
         <div className="bg-text-dark text-white border border-gold/30 px-4 py-2.5 mr-3 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 pointer-events-none transition-all duration-500 ease-out shadow-lg hidden sm:block">
           <span className="text-[9px] tracking-[0.3em] uppercase font-semibold text-gold">
@@ -168,8 +182,8 @@ export default function Home() {
       {/* Floating Concierge WhatsApp Button */}
       <div className="fixed bottom-6 md:bottom-8 right-6 md:right-8 z-50 flex items-center group">
         {/* Mobile WhatsApp Label directly at the top */}
-        <div className="absolute -top-7.5 left-1/2 -translate-x-1/2 bg-black/95 backdrop-blur-md text-white border border-gold/45 px-2.5 py-0.5 rounded-full shadow-md shadow-black/30 sm:hidden whitespace-nowrap z-20">
-          <span className="text-[7.5px] tracking-[0.22em] uppercase font-bold text-gold">
+        <div className="absolute -top-7.5 left-1/2 -translate-x-1/2 bg-black/70 backdrop-blur-md text-white border border-gold/45 px-2.5 py-0.5 rounded-full shadow-md shadow-black/30 sm:hidden whitespace-nowrap z-20">
+          <span className="text-[7.5px] tracking-[0.22em] uppercase font-bold text-white">
             WHATSAPP
           </span>
         </div>
