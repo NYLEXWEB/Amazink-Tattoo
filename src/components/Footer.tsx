@@ -160,7 +160,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="pt-4 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4">
           <p className="text-[10px] tracking-[0.25em] text-text-dark/65 uppercase font-semibold">
-            © {new Date().getFullYear()} AMAZINK COUTURE. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} AMAZINK TATTOO STUDIO. ALL RIGHTS RESERVED.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-[10px] tracking-[0.25em] text-text-dark/65 hover:text-gold transition-colors duration-300 uppercase font-semibold">

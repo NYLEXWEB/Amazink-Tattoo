@@ -174,7 +174,7 @@ export default function Hero() {
 
               {/* 6. Brand Couture Stamp (Bottom Right) */}
               <div className="absolute bottom-4 right-4 z-20 text-white/80 font-sans text-[7.5px] tracking-[0.45em] uppercase font-bold pr-1.5 border-r border-gold">
-                AMAZINK // COUTURE
+                AMAZINK // TATTOO STUDIO
               </div>
             </div>
           </div>

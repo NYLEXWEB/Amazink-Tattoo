@@ -7,7 +7,7 @@
   --color-bg-primary: #FFFFFF;
   --color-bg-secondary: #F8F8F6;
   --color-text-dark: #111111;
-  --color-gold: #C8A96B;
+  --color-gold: #5C4033;
   --color-border-dark: rgba(17, 17, 17, 0.08);
 
   --animate-fade-up: fade-up 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -68,6 +68,16 @@ html {
 body {
   font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
+}
+
+/* Premium Black & White Image Treatment */
+img:not(.no-grayscale) {
+  filter: grayscale(100%);
+  transition: filter 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+img:not(.no-grayscale):hover {
+  filter: grayscale(0%);
 }
 
 /* Custom Scrollbar */

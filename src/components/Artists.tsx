@@ -17,7 +17,7 @@ const ARTISTS: ArtistProfile[] = [
     name: 'MIDHUN KV',
     role: 'Founder & Principal Master Artist',
     specialty: 'Surrealism, Sacred Geometry, Realism & Bold Blackwork',
-    experience: '5 Years of Couture Needlework',
+    experience: '14 Years of Couture Needlework',
     philosophy: 'Body art should behave as a custom-fit canvas for individual stories. I analyze the unique flow of muscle and bone structures to design permanent visual masterpieces that harmonize with the body, delivering originality and uncompromising precision at our hygienic Calicut studio.',
     quote: "Every line drawn is an indelible legacy; custom ink is a conversation that lasts a lifetime.",
     signature: 'Midhun KV',

@@ -57,7 +57,7 @@ export default function About() {
                 "We do not merely create tattoos; we design permanent visual narratives that harmonize with the contours of the human canvas."
               </p>
               <p>
-                As a renowned <strong>Tattoo Shop Calicut</strong> trusted by clients seeking the <strong>Best Tattoo Artist Calicut</strong>, every project is approached as a commission for a private collection. We work by appointment only, ensuring that each client is afforded complete privacy, undivided focus, and a bespoke artistic dialogue at our <strong>Hygienic Tattoo Studio Calicut</strong>.
+                As a renowned <strong>Tattoo Shop Calicut</strong> trusted by clients seeking the <strong>Best Tattoo Artist Calicut</strong>, we ensure that each client is afforded complete privacy, undivided focus, and a bespoke artistic dialogue at our <strong>Hygienic Tattoo Studio Calicut</strong>.
               </p>
             </div>
 
