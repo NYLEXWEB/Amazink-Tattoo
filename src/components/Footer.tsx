@@ -36,7 +36,7 @@ export default function Footer() {
                 An elite, custom tattoo atelier focused on artistic storytelling, fine-needle geometry, and premium, highly sterile client environments.
               </p>
             </div>
-            
+
             <div className="mt-6">
               <span className="text-[11px] tracking-[0.25em] text-gold font-semibold uppercase block">
                 STUDIO LOCATION

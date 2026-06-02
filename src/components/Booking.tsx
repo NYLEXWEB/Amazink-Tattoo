@@ -9,20 +9,20 @@ export default function Booking() {
     phone: '',
     message: '',
   });
-  
+
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
-    
+
     // Prefill mailto parameters and open client
     const subject = encodeURIComponent(`Amazink Tattoo Inquiry from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
     );
     const mailtoUrl = `mailto:amazinktattoos209@gmail.com?subject=${subject}&body=${body}`;
-    
+
     // Simulate luxury API call with artificial delay, then open mail client
     setTimeout(() => {
       window.location.href = mailtoUrl;
