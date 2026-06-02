@@ -26,7 +26,7 @@ const ARTWORKS: Artwork[] = [
     id: 2,
     title: 'THE ALL-SEEING MANDALA',
     category: 'Blackwork',
-    imgUrl: '/mandala-all-seeing-eye-forearm-tattoos-calicut.jpg',
+    imgUrl: '/mandala-all-seeing-eye-forearm-tattoos-calicut.png',
     artist: 'Midhun & Akhil Saju',
     dimensions: '16cm x 12cm',
     altText: 'Intricate matching sacred geometry mandalas with the Eye of Providence forearm tattoos, custom styled by Midhun and Akhil Saju at Amazing Tattoo in Calicut.',

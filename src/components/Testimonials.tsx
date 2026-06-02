@@ -68,7 +68,7 @@ export default function Testimonials() {
         <div className="max-w-xl mb-20">
           <span className="luxury-label mb-4 block">06 // THE ACCOLADES</span>
           <h2 className="editorial-title text-[42px] sm:text-[56px] text-text-dark font-light leading-none">
-            PATRON TESTIMONIALS
+            CUSTOMER TESTIMONIALS
           </h2>
           <p className="font-sans text-xs sm:text-sm text-text-dark/50 mt-6 tracking-wider font-light uppercase">
             Featured reviews from our esteemed collectors.

@@ -25,15 +25,16 @@ export default function Footer() {
           {/* Brand & Positioning (md: 3 cols) */}
           <div className="md:col-span-3 flex flex-col justify-between">
             <div>
-              <div className="mb-4">
-                <img 
-                  src="/logo (3).png" 
-                  alt="Amazink Tattoos" 
-                  className="h-20 w-auto object-contain no-grayscale opacity-90 hover:opacity-100 transition-opacity duration-300"
-                />
+              <div className="mb-6">
+                <h3 className="font-serif text-3xl text-[#111111] tracking-[0.12em] font-medium leading-none">
+                  AMAZINK
+                </h3>
+                <p className="text-[10px] tracking-[0.35em] text-gold font-bold uppercase mt-2">
+                  TATTOO STUDIO
+                </p>
               </div>
               <p className="font-sans text-sm sm:text-[15px] text-text-dark/70 leading-relaxed font-light mt-4 max-w-sm">
-                An elite, custom tattoo atelier focused on artistic storytelling, fine-needle geometry, and premium, highly sterile client environments.
+                An elite, custom tattoo studio focused on artistic storytelling, fine-needle geometry, and premium, highly sterile client environments.
               </p>
             </div>
 

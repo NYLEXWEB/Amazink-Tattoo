@@ -105,7 +105,7 @@ export default function Booking() {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="Alexandra Montgomery"
+                    placeholder="Customer Name"
                     className="border-b border-border-dark focus:border-gold py-3 text-sm font-light text-text-dark bg-transparent outline-none transition-colors duration-300"
                   />
                 </div>
@@ -122,7 +122,7 @@ export default function Booking() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="alexandra@vogue.com"
+                    placeholder="Customer Email"
                     className="border-b border-border-dark focus:border-gold py-3 text-sm font-light text-text-dark bg-transparent outline-none transition-colors duration-300"
                   />
                 </div>
