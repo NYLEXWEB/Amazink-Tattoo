@@ -112,13 +112,13 @@ export default function Footer() {
               <li>
                 <span className="text-text-dark/60 block text-[10px] tracking-[0.1em] font-semibold">SUNDAY - SATURDAY</span>
                 <span className="block text-xs text-text-dark/70 font-light mt-1.5 space-y-1">
-                  <span>Sunday: Open 10 AM TO 10PM</span><br />
-                  <span>Monday: Open 10 AM TO 10PM</span><br />
-                  <span>Tuesday: Open 10 AM TO 10PM</span><br />
-                  <span>Wednesday: Open 10 AM TO 10PM</span><br />
-                  <span>Thursday: Open 10 AM TO 10PM</span><br />
-                  <span>Friday: Open 10 AM TO 10PM</span><br />
-                  <span>Saturday: Open 10 AM TO 10PM</span>
+                  <span>Sunday: Open 10 AM TO 10 PM</span><br />
+                  <span>Monday: Open 10 AM TO 10 PM</span><br />
+                  <span>Tuesday: Open 10 AM TO 10 PM</span><br />
+                  <span>Wednesday: Open 10 AM TO 10 PM</span><br />
+                  <span>Thursday: Open 10 AM TO 10 PM</span><br />
+                  <span>Friday: Open 10 AM TO 10 PM</span><br />
+                  <span>Saturday: Open 10 AM TO 10 PM</span>
                 </span>
               </li>
               <li>
