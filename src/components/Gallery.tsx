@@ -148,12 +148,12 @@ export default function Gallery() {
               <div className="absolute -inset-2.5 border border-gold/0 group-hover:border-gold/35 transition-all duration-500 z-0"></div>
 
               {/* Image Block */}
-              <div className="relative overflow-hidden bg-bg-secondary aspect-[4/5] z-10 border border-border-dark">
+              <div className="relative overflow-hidden bg-bg-secondary aspect-[4/5] z-10 border border-border-dark p-3 bg-white flex items-center justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={art.imgUrl}
                   alt={art.altText}
-                  className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
+                  className="w-full h-full object-contain transition-transform duration-1000 ease-out group-hover:scale-[1.03]"
                   loading="lazy"
                 />
                 

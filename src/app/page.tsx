@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     "Welcome to Amazink Tattoo, the leading Tattoo Studio Calicut trusted by tattoo enthusiasts seeking creativity, quality, and professionalism. Recognized as a Best Tattoo Studio Calicut, our studio is dedicated to delivering exceptional tattoo experiences with custom artwork, advanced techniques, and the highest standards of hygiene. As a renowned Tattoo Shop Calicut and Tattoo Studio Kozhikode, we specialize in creating unique and meaningful tattoos tailored to every client's vision. Whether you are looking for the Best Tattoo Artist Calicut or an experienced Tattoo Artist Kozhikode, our skilled team is committed to transforming your ideas into stunning body art. Amazink Tattoo is a Professional Tattoo Studio Calicut offering Custom Tattoo Calicut services for clients who value originality and precision. If you are searching for a Tattoo Near Me, Best Tattoo Shop Near Me, or Tattoo Artist Near Me, our studio provides a welcoming environment where creativity meets professionalism. Conveniently located as a Tattoo Studio YMCA Cross Road Calicut, we are easily accessible for clients looking for a Tattoo Studio Near Mananchira, Tattoo Studio Near Mavoor Road, or Tattoo Studio Near Kozhikode Beach. As a trusted Tattoo Studio in Kozhikode Kerala, we proudly serve clients from across the city and beyond. Our reputation as a Premium Tattoo Studio Calicut is built on artistic excellence, customer satisfaction, and strict safety protocols. We are also known as a Hygienic Tattoo Studio Calicut, ensuring every procedure follows industry-leading sterilization practices. Our team includes highly skilled professionals recognized as Certified Tattoo Artist Calicut specialists. At Amazink Tattoo, we provide Custom Tattoo Design Calicut services across a wide range of tattoo styles. Whether you desire a Realistic Tattoo Calicut, Portrait Tattoo Calicut, Mandala Tattoo Calicut, Lion Tattoo Calicut, Sleeve Tattoo Calicut, Couple Tattoo Calicut, Cover Up Tattoo Calicut, Black and Grey Tattoo Calicut, Colour Tattoo Calicut, or Minimal Tattoo Calicut, our artists bring exceptional detail and craftsmanship to every design. Amazink Tattoo has become one of the most recognized names in the tattoo industry, with clients frequently searching for Amazink Tattoo, Amazink Tattoo Calicut, and Amazink Tattoo Kozhikode when looking for premium tattoo services. Our commitment to excellence has earned us recognition as the Best Tattoo Studio in Calicut by Amazink Tattoo, serving clients who seek world-class tattoo artistry in a safe and professional environment. Located at Amazink Tattoo YMCA Cross Road, our studio combines creativity, precision, and hygiene to deliver unforgettable tattoo experiences. Whether you're planning your first tattoo or adding to an existing collection, Amazink Tattoo is your trusted destination for custom tattoos, artistic expression, and professional tattoo services in Calicut and Kozhikode.",
   keywords: [
     "Tattoo Studio Calicut",
+    "Tattoo Studio in Kozhikode",
+    "Tattoo Studio in Calicut",
     "Best Tattoo Studio Calicut",
     "Tattoo Shop Calicut",
     "Tattoo Studio Kozhikode",
@@ -87,7 +89,7 @@ export default function Home() {
       </main>
 
       {/* Floating Google Review Button */}
-      <div className="fixed bottom-64 right-8 z-50 flex items-center group">
+      <div className="fixed bottom-50 md:bottom-64 right-6 md:right-8 z-50 flex items-center group">
         {/* Slide-out Text Label */}
         <div className="bg-text-dark text-white border border-gold/30 px-4 py-2.5 mr-3 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 pointer-events-none transition-all duration-500 ease-out shadow-lg hidden sm:block">
           <span className="text-[9px] tracking-[0.3em] uppercase font-semibold text-gold">
@@ -132,7 +134,7 @@ export default function Home() {
       </div>
 
       {/* Floating Instagram Button */}
-      <div className="fixed bottom-36 right-8 z-50 flex items-center group">
+      <div className="fixed bottom-28 md:bottom-36 right-6 md:right-8 z-50 flex items-center group">
         {/* Slide-out Text Label */}
         <div className="bg-text-dark text-white border border-gold/30 px-4 py-2.5 mr-3 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 pointer-events-none transition-all duration-500 ease-out shadow-lg hidden sm:block">
           <span className="text-[9px] tracking-[0.3em] uppercase font-semibold text-gold">
@@ -163,10 +165,10 @@ export default function Home() {
       </div>
 
       {/* Floating Concierge WhatsApp Button */}
-      <div className="fixed bottom-8 right-8 z-50 flex items-center group">
+      <div className="fixed bottom-6 md:bottom-8 right-6 md:right-8 z-50 flex items-center group">
         {/* Mobile WhatsApp Label directly at the top */}
-        <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black/90 text-white border border-gold/40 px-3 py-1 rounded-full shadow-lg sm:hidden whitespace-nowrap z-20">
-          <span className="text-[8px] tracking-[0.2em] uppercase font-bold text-gold">
+        <div className="absolute -top-7.5 left-1/2 -translate-x-1/2 bg-black/95 backdrop-blur-md text-white border border-gold/45 px-2.5 py-0.5 rounded-full shadow-md shadow-black/30 sm:hidden whitespace-nowrap z-20">
+          <span className="text-[7.5px] tracking-[0.22em] uppercase font-bold text-gold">
             WHATSAPP
           </span>
         </div>

@@ -51,7 +51,7 @@ export default function About() {
             {/* Long Copy */}
             <div className="space-y-6 text-text-dark/70 font-light tracking-wide leading-relaxed text-sm sm:text-base">
               <p>
-                Amazink Tattoo is born from the convergence of fine art, couture aesthetics, and master-level body ornamentation. Established as the premier <strong>Tattoo Studio in Kozhikode, Kerala</strong>, we reject the standard, loud tattoo shop paradigm. In its place, we have built a sanctuary—a silent luxury space of premium design and museum-like focus.
+                Amazink Tattoo is born from the convergence of fine art, couture aesthetics, and master-level body ornamentation. Established as the premier <strong>Tattoo Studio in Kozhikode, Kerala</strong>, loud tattoo shop paradigm. In its place, we have built a sanctuary—a silent luxury space of premium design and museum-like focus.
               </p>
               <p className="border-l-2 border-gold/45 pl-6 font-serif italic text-text-dark text-lg sm:text-xl py-2">
                 "We do not merely create tattoos; we design permanent visual narratives that harmonize with the contours of the human canvas."

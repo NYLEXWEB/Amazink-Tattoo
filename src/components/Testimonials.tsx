@@ -2,8 +2,64 @@
 
 import { useState } from 'react';
 
+type Review = {
+  id: number;
+  author: string;
+  role?: string;
+  project: string;
+  rating: number;
+  intro: string;
+  paragraphs: string[];
+  highlights: string[];
+  services: string[];
+};
+
+const REVIEWS: Review[] = [
+  {
+    id: 1,
+    author: "Aswathi T P",
+    role: "Senior Chartered Accountant, KPMG USA",
+    project: "Mandala Leg Sleeve Commission",
+    rating: 5,
+    intro: "There aren't enough words in the English vocabulary that would express how much I love the tattoos I got and how grateful I am to Midhun @ Amazink Tattoos for helping me fulfill this long-time dream of mine.",
+    paragraphs: [
+      "There aren't enough words in the English vocabulary that would express how much I love the tattoos I got and how grateful I am to Midhun @ Amazink Tattoos for helping me fulfill this long-time dream of mine.",
+      "For one, getting an accomplished tattoo artist near home was a surprise in itself. I did have my concerns so I read through all the review comments in Google (which turned out to be really great) and additionally to get some more clarity I called Midhun and set an appointment with him. The studio is easily accessible and in a prime location. The interiors are well-maintained and hygienic.",
+      "Midhun is a wonderful, passionate artist and patiently answered all my questions. We decided on the dates and schedule as well.",
+      "It took two days to complete the tattoos as I had decided to go all out and get mandala tattoos on both my legs (from the area below the knee to my feet). The designs included lots of fine detailing and required an immense amount of patience.",
+      "Midhun is very particular about ensuring that everything is perfect, he wouldn't rest till he is satisfied with the results. He even helped me choose the right designs and design combinations.",
+      "Additionally, at the studio they also ensured that my brother, who had accompanied me on both the days, was comfortable and included him in all the conversations. I totally believe that if you go to him for getting your tattoos, you are in really safe hands.",
+      "Then there is Prabeesh, who is another accomplished artist working alongside Midhun. He did take over some part of my tattooing and is equally particular about following all the rules and ensuring that the end product is spectacular.",
+      "If you are someone looking for an assurance, go right ahead and book an appointment with them. You would be in the best hands."
+    ],
+    highlights: ["Cleanliness", "Quality", "Professionalism", "Value"],
+    services: ["Tattoo aftercare", "Geometric patterns and mandalas", "Sleeve tattoos", "Tattoo design"]
+  },
+  {
+    id: 2,
+    author: "Anooj AP",
+    project: "Wife & Baby Love Symbol Tattoo",
+    rating: 5,
+    intro: "I just completed my fourth and fifth tattoo with Amazink Tattoo and the experience in Calicut is consistently phenomenal. This custom piece, a baby love and wife love symbol, is so deeply personal, and the artist perfectly executed the meaningful family tattoo design.",
+    paragraphs: [
+      "I just completed my fourth and fifth tattoo with Amazink Tattoo and the experience in Calicut is consistently phenomenal. This custom piece, a baby love and wife love symbol, is so deeply personal, and the artist perfectly executed the meaningful family tattoo design. The professionalism and hygiene at the Kozhikode studio are the best in Kerala. If you're searching for a trusted, professional tattoo artist in Calicut for a meaningful, custom design, look no further than Amazink Tattoo.",
+      "The studio's location on YMCA Cross Road is convenient, but it's the 4.9-star quality that keeps me returning as a loyal client. If you are looking for a professional tattoo artist in Kerala to create a meaningful family symbol tattoo with incredible precision and hygiene, look no further. Highly recommend for any custom or meaningful couple tattoo design.",
+      "Kudos to Midhun (artist)!"
+    ],
+    highlights: ["Loyal Client", "Professionalism", "Perfect Hygiene", "4.9-Star Quality"],
+    services: ["Abstract tattoos", "Colour ink tattoos", "Tattoo design"]
+  }
+];
+
 export default function Testimonials() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [expandedReviews, setExpandedReviews] = useState<Record<number, boolean>>({});
+
+  const toggleExpand = (id: number) => {
+    setExpandedReviews((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
 
   return (
     <section id="testimonials" className="section-spacing bg-white overflow-hidden">
@@ -12,122 +68,114 @@ export default function Testimonials() {
         <div className="max-w-xl mb-20">
           <span className="luxury-label mb-4 block">06 // THE ACCOLADES</span>
           <h2 className="editorial-title text-[42px] sm:text-[56px] text-text-dark font-light leading-none">
-            PATRON TESTIMONIAL
+            PATRON TESTIMONIALS
           </h2>
           <p className="font-sans text-xs sm:text-sm text-text-dark/50 mt-6 tracking-wider font-light uppercase">
-            A featured review from our esteemed collector.
+            Featured reviews from our esteemed collectors.
           </p>
         </div>
 
-        {/* Central Single Testimony Block */}
-        <div className="max-w-4xl mx-auto bg-[#FCFAF7] border border-[#E5E2DA] p-8 sm:p-12 md:p-16 relative rounded shadow-sm">
-          {/* Elegant corner brackets */}
-          <div className="absolute top-3 left-3 w-4 h-4 border-t border-l border-[#C8A96B]/30"></div>
-          <div className="absolute top-3 right-3 w-4 h-4 border-t border-r border-[#C8A96B]/30"></div>
-          <div className="absolute bottom-3 left-3 w-4 h-4 border-b border-l border-[#C8A96B]/30"></div>
-          <div className="absolute bottom-3 right-3 w-4 h-4 border-b border-r border-[#C8A96B]/30"></div>
+        {/* Accolades Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
+          {REVIEWS.map((review) => {
+            const isExpanded = !!expandedReviews[review.id];
+            return (
+              <div 
+                key={review.id}
+                className="bg-[#FCFAF7] border border-[#E5E2DA] p-6 sm:p-10 md:p-12 relative rounded shadow-sm flex flex-col justify-between h-full transition-all duration-300"
+              >
+                {/* Elegant corner brackets */}
+                <div className="absolute top-3 left-3 w-3.5 h-3.5 border-t border-l border-[#C8A96B]/30"></div>
+                <div className="absolute top-3 right-3 w-3.5 h-3.5 border-t border-r border-[#C8A96B]/30"></div>
+                <div className="absolute bottom-3 left-3 w-3.5 h-3.5 border-b border-l border-[#C8A96B]/30"></div>
+                <div className="absolute bottom-3 right-3 w-3.5 h-3.5 border-b border-r border-[#C8A96B]/30"></div>
 
-          {/* Rating stars & Author Header */}
-          <div className="flex flex-col items-center text-center mb-8 border-b border-[#E5E2DA] pb-8">
-            <div className="flex text-[#C8A96B] text-xl space-x-1.5 mb-4">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <h3 className="font-serif text-3xl sm:text-4xl text-[#111111] font-light tracking-wide">
-              Aswathi T P
-            </h3>
-            <p className="text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-gold font-bold mt-2">
-              Senior Chartered Accountant, KPMG USA
-            </p>
-          </div>
-
-          {/* Quote Content */}
-          <div className="space-y-6 text-text-dark/85 font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify">
-            {/* Paragraph 1 - Always Visible */}
-            <p className="font-serif text-lg sm:text-xl md:text-2xl text-[#111111]/90 italic font-light leading-relaxed text-center mb-8">
-              “There aren't enough words in the English vocabulary that would express how much I love the tattoos I got and how grateful I am to Midhun @ Amazink Tattoos for helping me fulfill this long-time dream of mine.”
-            </p>
-
-            {/* Paragraph 2 - Always Visible */}
-            <p>
-              For one, getting an accomplished tattoo artist near home was a surprise in itself. I did have my concerns so I read through all the review comments in Google (which turned out to be really great) and additionally to get some more clarity I called Midhun and set an appointment with him. The studio is easily accessible and in a prime location. The interiors are well-maintained and hygienic.
-            </p>
-
-            {/* Collapsible Content */}
-            <div className={`space-y-6 transition-all duration-700 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[2500px] opacity-100 mt-6' : 'max-h-0 opacity-0 pointer-events-none'}`}>
-              <p>
-                Midhun is a wonderful, passionate artist and patiently answered all my questions. We decided on the dates and schedule as well.
-              </p>
-              <p>
-                It took two days to complete the tattoos as I had decided to go all out and get mandala tattoos on both my legs (from the area below the knee to my feet). The designs included lots of fine detailing and required an immense amount of patience.
-              </p>
-              <p>
-                Midhun is very particular about ensuring that everything is perfect, he wouldn't rest till he is satisfied with the results. He even helped me choose the right designs and design combinations.
-              </p>
-              <p>
-                Additionally, at the studio they also ensured that my brother, who had accompanied me on both the days, was comfortable and included him in all the conversations. I totally believe that if you go to him for getting your tattoos, you are in really safe hands.
-              </p>
-              <p>
-                Then there is Prabeesh, who is another accomplished artist working alongside Midhun. He did take over some part of my tattooing and is equally particular about following all the rules and ensuring that the end product is spectacular.
-              </p>
-              <p>
-                If you are someone looking for an assurance, go right ahead and book an appointment with them. You would be in the best hands.
-              </p>
-
-              {/* Attributes & Services Details (Luxury styled lists) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-[#E5E2DA] mt-8 text-left">
-                {/* Positives */}
-                <div>
-                  <h4 className="text-[10px] tracking-[0.25em] uppercase font-bold text-gold mb-3.5">
-                    HIGHLIGHTS
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["Cleanliness", "Quality", "Professionalism", "Value"].map((pos, idx) => (
-                      <span key={idx} className="text-[10px] tracking-wider text-text-dark/75 border border-gold/30 px-3 py-1 bg-white">
-                        {pos}
-                      </span>
-                    ))}
+                {/* Rating & Author Header */}
+                <div className="flex flex-col items-center text-center mb-6 border-b border-[#E5E2DA] pb-6">
+                  <div className="flex text-[#C8A96B] text-lg space-x-1 mb-3">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                   </div>
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#111111] font-light tracking-wide">
+                    {review.author}
+                  </h3>
+                  {review.role && (
+                    <p className="text-[10px] tracking-[0.25em] uppercase text-gold font-bold mt-1.5">
+                      {review.role}
+                    </p>
+                  )}
                 </div>
 
-                {/* Services */}
-                <div>
-                  <h4 className="text-[10px] tracking-[0.25em] uppercase font-bold text-gold mb-3.5">
-                    SERVICES RENDERED
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["Tattoo aftercare", "Geometric patterns and mandalas", "Sleeve tattoos", "Tattoo design"].map((srv, idx) => (
-                      <span key={idx} className="text-[10px] tracking-wider text-text-dark/75 border border-neutral-300 px-3 py-1 bg-white">
-                        {srv}
-                      </span>
+                {/* Quote Content */}
+                <div className="space-y-6 text-text-dark/85 font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify flex-grow">
+                  {/* First Paragraph (Quote Intro) - Always Visible */}
+                  <p className="font-serif text-base sm:text-lg md:text-xl text-[#111111]/90 italic font-light leading-relaxed text-center mb-6">
+                    “{review.intro}”
+                  </p>
+
+                  {/* Collapsible Content */}
+                  <div className={`space-y-6 transition-all duration-700 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[2500px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}>
+                    {review.paragraphs.slice(1).map((para, pIdx) => (
+                      <p key={pIdx}>{para}</p>
                     ))}
+
+                    {/* Attributes & Services Details */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-[#E5E2DA] mt-6 text-left">
+                      {/* Highlights */}
+                      <div>
+                        <h4 className="text-[9px] tracking-[0.25em] uppercase font-bold text-gold mb-2.5">
+                          HIGHLIGHTS
+                        </h4>
+                        <div className="flex flex-wrap gap-1.5">
+                          {review.highlights.map((pos, idx) => (
+                            <span key={idx} className="text-[9px] tracking-wider text-text-dark/75 border border-gold/30 px-2.5 py-0.5 bg-white">
+                              {pos}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Services */}
+                      <div>
+                        <h4 className="text-[9px] tracking-[0.25em] uppercase font-bold text-gold mb-2.5">
+                          SERVICES RENDERED
+                        </h4>
+                        <div className="flex flex-wrap gap-1.5">
+                          {review.services.map((srv, idx) => (
+                            <span key={idx} className="text-[9px] tracking-wider text-text-dark/75 border border-neutral-300 px-2.5 py-0.5 bg-white">
+                              {srv}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Read More Trigger */}
+                  <div className="flex justify-center pt-4">
+                    <button
+                      onClick={() => toggleExpand(review.id)}
+                      className="group inline-flex items-center space-x-2 text-[10px] tracking-[0.3em] text-[#C8A96B] font-bold uppercase transition-all duration-300 hover:text-[#111111] border-b border-[#C8A96B]/50 hover:border-[#111111] pb-0.5 cursor-pointer"
+                    >
+                      <span>{isExpanded ? 'READ LESS' : 'READ FULL REVIEW'}</span>
+                      <svg
+                        className={`w-3 h-3 transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Read More Trigger */}
-            <div className="flex justify-center pt-6">
-              <button
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="group inline-flex items-center space-x-2 text-[10px] tracking-[0.3em] text-[#C8A96B] font-bold uppercase transition-all duration-300 hover:text-[#111111] border-b border-[#C8A96B]/50 hover:border-[#111111] pb-1 cursor-pointer animate-pulse-slow"
-              >
-                <span>{isExpanded ? 'READ LESS' : 'READ FULL REVIEW'}</span>
-                <svg
-                  className={`w-3.5 h-3.5 transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                </svg>
-              </button>
-            </div>
-          </div>
+            );
+          })}
         </div>
 
         {/* Google Verified Review Curation CTA */}
-        <div className="mt-20 bg-[#FCFAF7] border border-[#E5E2DA] p-8 sm:p-12 md:py-12 md:px-16 relative rounded max-w-4xl mx-auto shadow-sm">
+        <div className="mt-24 bg-[#FCFAF7] border border-[#E5E2DA] p-8 sm:p-12 md:py-12 md:px-16 relative rounded max-w-4xl mx-auto shadow-sm">
           <div className="absolute top-2.5 left-2.5 w-3 h-3 border-t border-l border-[#C8A96B]/30"></div>
           <div className="absolute top-2.5 right-2.5 w-3 h-3 border-t border-r border-[#C8A96B]/30"></div>
           <div className="absolute bottom-2.5 left-2.5 w-3 h-3 border-b border-l border-[#C8A96B]/30"></div>
@@ -181,7 +229,7 @@ export default function Testimonials() {
                 href="https://www.google.com/maps/place/Amazink+tattoo+studio+calicut/@11.2606895,75.7765858,17z/data=!4m18!1m9!3m8!1s0x3ba65ebf6972431f:0x28291246983dbf15!2sAmazink+tattoo+studio+calicut!8m2!3d11.2606895!4d75.7791607!9m1!1b1!16s%2Fg%2F11c1r2bq8t!3m7!1s0x3ba65ebf6972431f:0x28291246983dbf15!8m2!3d11.2606895!4d75.7791607!9m1!1b1!16s%2Fg%2F11c1r2bq8t?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full px-8 py-4 bg-[#111111] hover:bg-[#C8A96B] text-white rounded-full text-[10px] tracking-[0.25em] uppercase font-bold flex items-center justify-center space-x-3 transition-all duration-500 hover:scale-[1.03] shadow-md border border-[#111111] hover:border-[#C8A96B]"
+                className="w-full px-8 py-4 bg-gold hover:bg-[#B39457] text-white rounded-full text-[10px] tracking-[0.25em] uppercase font-bold flex items-center justify-center space-x-3 transition-all duration-500 hover:scale-[1.03] shadow-md border border-gold hover:border-[#B39457]"
               >
                 <span>WRITE A REVIEW</span>
                 <svg
