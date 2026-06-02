@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section 
       id="hero" 
-      className="relative h-[calc(100vh-120px)] mt-[102px] flex items-center bg-white overflow-hidden pb-4 pt-4 lg:pb-0 lg:pt-0 border-b border-border-dark/50 min-h-[580px] lg:min-h-[640px]"
+      className="relative h-auto lg:h-[calc(100vh-120px)] mt-[102px] flex items-center bg-white overflow-hidden pb-12 pt-6 lg:pb-0 lg:pt-0 border-b border-border-dark/50 lg:min-h-[640px]"
     >
       {/* Background Architectural Grid Accent */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] z-0">
