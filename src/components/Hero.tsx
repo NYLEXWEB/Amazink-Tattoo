@@ -134,11 +134,6 @@ export default function Hero() {
 
               {/* INTEGRATED INTERESTING STAMPS & BLUEPRINTS (Merged concept) */}
               
-              {/* 1. Atelier Stamp (Top Left) */}
-              <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-sm border border-gold/45 px-2.5 py-1 text-[7.5px] tracking-[0.25em] text-text-dark uppercase font-semibold hidden md:block">
-                [ DOSSIER NO. 01 // ARCHIVE ]
-              </div>
-
               {/* 2. Studio Coordinates Stamp (Top Right) */}
               <div className="absolute top-4 right-4 z-20 text-white/90 font-mono text-[8px] tracking-[0.15em] font-light hidden md:block">
                 11.2607° N, 75.7792° E
@@ -154,22 +149,6 @@ export default function Hero() {
                 <div className="absolute h-[85%] w-[1px] bg-gold/35"></div>
                 {/* Micro center crosshair box */}
                 <div className="absolute w-5 h-5 border border-gold/55"></div>
-              </div>
-
-              {/* 4. Fine Needle Placement Dimensions Spec (Center Right) */}
-              <div className="absolute right-4 top-[40%] z-20 border-r border-gold/45 pr-2.5 text-right hidden lg:block opacity-75">
-                <span className="text-[6.5px] tracking-[0.3em] text-gold uppercase block font-semibold">PLACEMENT ZONE</span>
-                <span className="text-[7.5px] text-white tracking-[0.1em] font-mono block mt-0.5">ANATOMY CRITERIA OK</span>
-              </div>
-
-              {/* 5. Curation Print (Bottom Left) */}
-              <div className="absolute bottom-4 left-4 z-20 flex flex-col text-left">
-                <span className="text-[7.5px] tracking-[0.35em] text-gold uppercase font-bold">
-                  AMZ ATELIER // INCISION
-                </span>
-                <span className="text-[6.5px] text-white/60 tracking-[0.2em] uppercase font-light mt-0.5">
-                  PATRON CAMPAIGN // KOZHIKODE
-                </span>
               </div>
 
               {/* 6. Brand Couture Stamp (Bottom Right) */}
