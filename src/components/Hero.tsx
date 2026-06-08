@@ -57,7 +57,7 @@ export default function Hero() {
 
             {/* Premium Supporting Copy */}
             <p className="font-sans text-xs sm:text-sm text-text-dark/65 leading-relaxed max-w-md mb-8 font-light tracking-wide">
-              An elite bespoke atelier executing anatomical fine-line and high-contrast blackwork. We harmonize geometry, story, and skin into permanent couture.
+              We are the Best Tattoo Studio in Kozhikode and Tattoo Studio in Calicut Welcome to Amazink Tattoo, a leading Tattoo Studio Kozhikode known for custom designs, premium hygiene standards, and exceptional artistry. Our experienced Tattoo Artist Kozhikode team specializes in realism tattoos, portrait tattoos, black and grey tattoos region.
             </p>
 
             {/* Solid Rounded-Full Gold CTA Button */}
